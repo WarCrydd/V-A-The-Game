@@ -31,6 +31,39 @@
     <Filter Include="Source Files\Felépítés">
       <UniqueIdentifier>{95dae372-d887-4176-8329-633bf598fef8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Fügetlenek">
+      <UniqueIdentifier>{ca62bc61-ef59-4e0a-be59-7dd82ded7b31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Felépítés\Menü">
+      <UniqueIdentifier>{d2a172e3-e9dd-4506-949e-05e0b6a8dd92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Felépítés\Univerzum">
+      <UniqueIdentifier>{a06eb6de-2bfa-488f-8488-8f74af5d0af0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Felépítés\Univerzum\Égitestek">
+      <UniqueIdentifier>{b4219d94-327a-40e0-9572-6e12daeef860}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Felépítés\Épitőelemek">
+      <UniqueIdentifier>{afc74483-6242-42f4-92e2-877ebdf75694}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Felépítés\Menü">
+      <UniqueIdentifier>{7a25dc5d-a285-4828-909a-5fc976b24c3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Felépítés\Épitőelemek">
+      <UniqueIdentifier>{bd5eee43-e2bf-4d66-83f7-1ea688ef2278}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Felépítés\Univerzum">
+      <UniqueIdentifier>{b346e9a1-d4b5-475c-84a5-187949808af8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Felépítés\Univerzum\Épített objektumok">
+      <UniqueIdentifier>{3b3b791c-8a64-4532-acc6-cf6ecf1dced8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Felépítés\Univerzum\Égitestek">
+      <UniqueIdentifier>{156f0ca9-f15f-4b12-98a1-8493f84eb9e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Felépítés\Univerzum\Épített objektumok">
+      <UniqueIdentifier>{8c0d9f54-0360-4264-a703-59bca3951189}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -55,6 +88,15 @@
     </ClInclude>
     <ClInclude Include="GrafikEngine.h">
       <Filter>Header Files\Grafika</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultAdatok.h">
+      <Filter>Header Files\Fügetlenek</Filter>
+    </ClInclude>
+    <ClInclude Include="Muveletek.h">
+      <Filter>Header Files\Fügetlenek</Filter>
+    </ClInclude>
+    <ClInclude Include="Enumok.h">
+      <Filter>Header Files\Fügetlenek</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

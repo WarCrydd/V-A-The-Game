@@ -25,8 +25,11 @@
     <ClCompile Include="MyObj.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DefaultAdatok.h" />
+    <ClInclude Include="Enumok.h" />
     <ClInclude Include="FizEngine.h" />
     <ClInclude Include="GrafikEngine.h" />
+    <ClInclude Include="Muveletek.h" />
     <ClInclude Include="MyObj.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
