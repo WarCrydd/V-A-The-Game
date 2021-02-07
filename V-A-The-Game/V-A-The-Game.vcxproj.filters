@@ -25,10 +25,10 @@
     <Filter Include="Header Files\Fizika">
       <UniqueIdentifier>{0477c7b9-0fa5-4602-ad0e-6d9c4265909a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Játék">
+    <Filter Include="Header Files\Felépítés">
       <UniqueIdentifier>{d40c7579-7dce-49f8-996e-ff1c35cbc982}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Játék">
+    <Filter Include="Source Files\Felépítés">
       <UniqueIdentifier>{95dae372-d887-4176-8329-633bf598fef8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -36,5 +36,25 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MyObj.cpp">
+      <Filter>Source Files\Felépítés</Filter>
+    </ClCompile>
+    <ClCompile Include="FizEngine.cpp">
+      <Filter>Source Files\Fizika</Filter>
+    </ClCompile>
+    <ClCompile Include="GrafikEngine.cpp">
+      <Filter>Source Files\Grafika</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyObj.h">
+      <Filter>Header Files\Felépítés</Filter>
+    </ClInclude>
+    <ClInclude Include="FizEngine.h">
+      <Filter>Header Files\Fizika</Filter>
+    </ClInclude>
+    <ClInclude Include="GrafikEngine.h">
+      <Filter>Header Files\Grafika</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

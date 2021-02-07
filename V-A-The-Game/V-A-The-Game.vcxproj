@@ -19,7 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FizEngine.cpp" />
+    <ClCompile Include="GrafikEngine.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MyObj.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FizEngine.h" />
+    <ClInclude Include="GrafikEngine.h" />
+    <ClInclude Include="MyObj.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
