@@ -18,3 +18,11 @@ namespace Gui
     unsigned int aranySzelesseg = 16;
     unsigned int megjelenitettMerett = 10000;           //A legtöbb képkockát tartalmazó oldal hossza a jaáték térben.
 }
+
+namespace Jatek
+{
+    namespace Alkotok
+    {
+        unsigned egyseg_meret = 200;
+    }
+}

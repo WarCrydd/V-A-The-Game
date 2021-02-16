@@ -1,0 +1,2 @@
+
+#include "FizikObj.h"

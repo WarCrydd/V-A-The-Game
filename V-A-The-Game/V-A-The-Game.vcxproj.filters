@@ -13,18 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Grafika">
-      <UniqueIdentifier>{a03d34b3-0061-4e04-b132-32b2f2a30dc9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Fizika">
-      <UniqueIdentifier>{153ecf0a-6e4f-480b-9955-537c1ffb2edf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Grafika">
-      <UniqueIdentifier>{83d65738-c575-4ab3-8643-d9aec0711061}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Fizika">
-      <UniqueIdentifier>{0477c7b9-0fa5-4602-ad0e-6d9c4265909a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Felépítés">
       <UniqueIdentifier>{d40c7579-7dce-49f8-996e-ff1c35cbc982}</UniqueIdentifier>
     </Filter>
@@ -64,6 +52,54 @@
     <Filter Include="Header Files\Z_Fügetlenek">
       <UniqueIdentifier>{ca62bc61-ef59-4e0a-be59-7dd82ded7b31}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Felépítés\Épitőelemek\Hajó">
+      <UniqueIdentifier>{83e50950-8017-4f64-85dc-dca97add5dc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Felépítés\Épitőelemek\Bázis">
+      <UniqueIdentifier>{9d54b16c-515e-495c-bc5e-7aae90369e5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Felépítés\Épitőelemek\Univerzális">
+      <UniqueIdentifier>{787ccd67-fcc4-4d30-a019-21eba8d2220e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Felépítés\Univerzum\Épített objektumok\Bázisok">
+      <UniqueIdentifier>{5339c46e-9704-4a70-9012-708d6f80b2d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Felépítés\Univerzum\Épített objektumok\Hajók">
+      <UniqueIdentifier>{8f4a6db9-4034-4f0d-8897-37ea232f8521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Felépítés\Univerzum\Épített objektumok\Bázisok">
+      <UniqueIdentifier>{f414b7d8-4bfa-4d13-b0ac-9008326efac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Felépítés\Univerzum\Épített objektumok\Hajók">
+      <UniqueIdentifier>{1128184f-fa28-4c02-aa26-4bf1575018b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Motor">
+      <UniqueIdentifier>{a433622b-0f29-47b7-9770-a6a9f33ee578}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Motor\Grafika">
+      <UniqueIdentifier>{83d65738-c575-4ab3-8643-d9aec0711061}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Motor\Fizika">
+      <UniqueIdentifier>{0477c7b9-0fa5-4602-ad0e-6d9c4265909a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Motor">
+      <UniqueIdentifier>{b0225aac-1784-4248-932a-0228b4e620ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Motor\Grafika">
+      <UniqueIdentifier>{a03d34b3-0061-4e04-b132-32b2f2a30dc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Motor\Fizika">
+      <UniqueIdentifier>{153ecf0a-6e4f-480b-9955-537c1ffb2edf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Felépítés\Épitőelemek\Bázis">
+      <UniqueIdentifier>{9be95a60-db37-4ddc-8e88-2e2893e12f7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Felépítés\Épitőelemek\Hajó">
+      <UniqueIdentifier>{41ddd929-bc5f-40b3-9f74-ead150ebd618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Felépítés\Épitőelemek\Univerzális">
+      <UniqueIdentifier>{cb0b5ff3-73ca-4bd0-a0f4-cb5481a40232}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -73,10 +109,25 @@
       <Filter>Source Files\Felépítés</Filter>
     </ClCompile>
     <ClCompile Include="FizEngine.cpp">
-      <Filter>Source Files\Fizika</Filter>
+      <Filter>Source Files\Motor\Fizika</Filter>
     </ClCompile>
     <ClCompile Include="GrafikEngine.cpp">
-      <Filter>Source Files\Grafika</Filter>
+      <Filter>Source Files\Motor\Grafika</Filter>
+    </ClCompile>
+    <ClCompile Include="FizikObj.cpp">
+      <Filter>Source Files\Motor\Fizika</Filter>
+    </ClCompile>
+    <ClCompile Include="EpitoElem.cpp">
+      <Filter>Source Files\Felépítés\Épitőelemek</Filter>
+    </ClCompile>
+    <ClCompile Include="EpitettObj.cpp">
+      <Filter>Source Files\Felépítés\Univerzum\Épített objektumok</Filter>
+    </ClCompile>
+    <ClCompile Include="LimitLessShip.cpp">
+      <Filter>Source Files\Felépítés\Univerzum\Épített objektumok\Hajók</Filter>
+    </ClCompile>
+    <ClCompile Include="EgysegNegyzet.cpp">
+      <Filter>Source Files\Felépítés\Épitőelemek\Univerzális</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -84,10 +135,10 @@
       <Filter>Header Files\Felépítés</Filter>
     </ClInclude>
     <ClInclude Include="FizEngine.h">
-      <Filter>Header Files\Fizika</Filter>
+      <Filter>Header Files\Motor\Fizika</Filter>
     </ClInclude>
     <ClInclude Include="GrafikEngine.h">
-      <Filter>Header Files\Grafika</Filter>
+      <Filter>Header Files\Motor\Grafika</Filter>
     </ClInclude>
     <ClInclude Include="DefaultAdatok.h">
       <Filter>Header Files\Z_Fügetlenek</Filter>
@@ -97,6 +148,21 @@
     </ClInclude>
     <ClInclude Include="Enumok.h">
       <Filter>Header Files\Z_Fügetlenek</Filter>
+    </ClInclude>
+    <ClInclude Include="FizikObj.h">
+      <Filter>Header Files\Motor\Fizika</Filter>
+    </ClInclude>
+    <ClInclude Include="EpitoElem.h">
+      <Filter>Header Files\Felépítés\Épitőelemek</Filter>
+    </ClInclude>
+    <ClInclude Include="EpitettObj.h">
+      <Filter>Header Files\Felépítés\Univerzum\Épített objektumok</Filter>
+    </ClInclude>
+    <ClInclude Include="LimitLessShip.h">
+      <Filter>Header Files\Felépítés\Univerzum\Épített objektumok\Hajók</Filter>
+    </ClInclude>
+    <ClInclude Include="EgysegNegyzet.h">
+      <Filter>Header Files\Felépítés\Épitőelemek\Univerzális</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
