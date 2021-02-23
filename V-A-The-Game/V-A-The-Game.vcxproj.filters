@@ -129,6 +129,12 @@
     <ClCompile Include="EgysegNegyzet.cpp">
       <Filter>Source Files\Felépítés\Épitőelemek\Univerzális</Filter>
     </ClCompile>
+    <ClCompile Include="GrafikObj.cpp">
+      <Filter>Source Files\Motor\Grafika</Filter>
+    </ClCompile>
+    <ClCompile Include="MyVector.cpp">
+      <Filter>Source Files\Motor\Fizika</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyObj.h">
@@ -163,6 +169,12 @@
     </ClInclude>
     <ClInclude Include="EgysegNegyzet.h">
       <Filter>Header Files\Felépítés\Épitőelemek\Univerzális</Filter>
+    </ClInclude>
+    <ClInclude Include="GrafikObj.h">
+      <Filter>Header Files\Motor\Grafika</Filter>
+    </ClInclude>
+    <ClInclude Include="MyVector.h">
+      <Filter>Header Files\Motor\Fizika</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

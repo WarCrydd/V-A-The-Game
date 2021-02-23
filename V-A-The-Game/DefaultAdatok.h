@@ -6,23 +6,39 @@ using namespace std;
 
 namespace Kijelzo
 {
-    unsigned int szelesseg = 800;
-    unsigned int magassag = 600;
-    bool fullScreen = false;
-    string felirat = "A valami";
+    static unsigned int szelesseg = 800;
+    static unsigned int magassag = 600;
+    static bool fullScreen = false;
+    static string felirat = "A valami";
+}
+
+namespace Render
+{
+    static int hasznaltDriver = 0;
 }
 
 namespace Gui
 {
-    unsigned int aranyMagassag = 9;
-    unsigned int aranySzelesseg = 16;
-    unsigned int megjelenitettMerett = 10000;           //A legtöbb képkockát tartalmazó oldal hossza a jaáték térben.
+    static unsigned int aranyMagassag = 9;
+    static unsigned int aranySzelesseg = 16;
+    static unsigned int megjelenitettMerett = 10000;           //A legtöbb képkockát tartalmazó oldal hossza a jaáték térben.
 }
 
 namespace Jatek
 {
     namespace Alkotok
     {
-        unsigned egyseg_meret = 200;
+        static unsigned egyseg_meret = 200;
+    }
+}
+
+namespace Kinezet
+{
+    namespace Negyzet
+    {
+        static int r = 255;
+        static int g = 0;
+        static int b = 0;
+        static int a = 0;
     }
 }

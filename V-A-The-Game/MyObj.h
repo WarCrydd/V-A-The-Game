@@ -1,28 +1,28 @@
 #pragma once
 #include <string>
 #include <SDL.h>
+#include <iostream>
 
 #include "FizikObj.h"
+#include "Muveletek.h"
+#include "GrafikObj.h"
 
 using namespace std;
 class MyObj
 {
 protected:
-    string nev = "";
-    SDL_Texture* textura;
-    SDL_Surface* kinezet;
+    FizikObj* body = nullptr;
+    GrafikObj* megjelenes = nullptr;
+
     bool betoltot = false;
-    FizikObj* body;
+
 public:
-    MyObj(string _nev, FizikObj* _body);
+    MyObj(FizikObj* _body, GrafikObj* _megjelenes);
     ~MyObj();
 
-    void setTexturaAktiv(SDL_Renderer* _renderer);
-    void setTexturaInaktiv();
-    SDL_Texture* getTexture();
     FizikObj* getBody();
+    GrafikObj* getMegjelenes();
 
-    virtual void setSurface() = 0;
     virtual void update() = 0;
 };
 

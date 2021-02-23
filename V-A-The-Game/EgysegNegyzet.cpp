@@ -1,10 +1,9 @@
 #include "EgysegNegyzet.h"
 
-void EgysegNegyzet::update()
+EgysegNegyzet::EgysegNegyzet(int _m, int _h, FizikObj* _body, GrafikObj* _megjelenes) : EpitoElem(_m, _h, _body, _megjelenes)
 {
 }
 
-void EgysegNegyzet::setSurface()
+void EgysegNegyzet::update()
 {
-    kinezet = SDL_CreateRGBSurface(0, 500, 500, 32, 0, 0, 0, 0);
 }

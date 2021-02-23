@@ -25,9 +25,11 @@
     <ClCompile Include="FizEngine.cpp" />
     <ClCompile Include="FizikObj.cpp" />
     <ClCompile Include="GrafikEngine.cpp" />
+    <ClCompile Include="GrafikObj.cpp" />
     <ClCompile Include="LimitLessShip.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyObj.cpp" />
+    <ClCompile Include="MyVector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DefaultAdatok.h" />
@@ -38,9 +40,11 @@
     <ClInclude Include="FizEngine.h" />
     <ClInclude Include="FizikObj.h" />
     <ClInclude Include="GrafikEngine.h" />
+    <ClInclude Include="GrafikObj.h" />
     <ClInclude Include="LimitLessShip.h" />
     <ClInclude Include="Muveletek.h" />
     <ClInclude Include="MyObj.h" />
+    <ClInclude Include="MyVector.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
