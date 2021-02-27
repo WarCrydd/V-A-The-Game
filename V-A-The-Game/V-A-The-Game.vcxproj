@@ -112,8 +112,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Dokumentumok\Projektek\SDL\SDL2-2.0.12\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Dokumentumok\Projektek\SDL\SDL2-2.0.12\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files\SDL2-2.0.14\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\SDL2-2.0.14\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
