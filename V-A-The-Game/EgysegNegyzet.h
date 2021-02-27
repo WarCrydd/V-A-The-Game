@@ -7,4 +7,3 @@ public:
 
     virtual void update() override;
 };
-

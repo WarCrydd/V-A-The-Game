@@ -15,6 +15,7 @@ private:
     SDL_Window* main_window;
     SDL_Renderer* main_renderer;
     SDL_Point* kozepPont;
+
     list<GrafikObj*>* ter = new list<GrafikObj*>();
     thread* foSzal = nullptr;
 

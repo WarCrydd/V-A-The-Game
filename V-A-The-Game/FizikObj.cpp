@@ -3,25 +3,42 @@
 
 FizikObj::FizikObj(int x, int y, int r)
 {
-    forgatas = new int(r);
-    kozepPont = new SDL_Point();
-    kozepPont->x = x;
-    kozepPont->y = y;
+    mozgasAllapot = new MozgasAllapot(x, y, r, nullptr, nullptr);
+}
+
+FizikObj::FizikObj(MozgasAllapot* _m)
+{
+    mozgasAllapot = _m;
+}
+
+MozgasAllapot* FizikObj::getMozgasAllapot()
+{
+    return nullptr;
+}
+
+void FizikObj::setMozgasAllapot(MozgasAllapot* _m)
+{
+    if (mozgasAllapot != nullptr)
+    {
+        delete mozgasAllapot;
+    }
+
+    mozgasAllapot = _m;
 }
 
 void FizikObj::setKozepPont(SDL_Point* _kozepPont)
 {
-    kozepPont = _kozepPont;
+    mozgasAllapot->setKozepPont(_kozepPont);
 }
 
 SDL_Point* FizikObj::getKozepPont()
 {
-    return kozepPont;
+    return mozgasAllapot->getKozepPont();
 }
 
 int* FizikObj::getForgatas()
 {
-    return forgatas;
+    return mozgasAllapot->getForgas();
 }
 
 void FizikObj::update()

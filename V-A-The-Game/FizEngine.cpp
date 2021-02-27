@@ -24,7 +24,6 @@ bool FizEngine::removEntitas(FizikObj* _entiti)
 
 void FizEngine::start()
 {
-    
     auto futas = [=]() 
     {
         while (fut)
@@ -35,6 +34,7 @@ void FizEngine::start()
             }
         }
     };
+
     fut = true;
     main_szal = new thread(futas);
 }
@@ -43,4 +43,6 @@ void FizEngine::stop()
 {
     fut = false;
     main_szal->join();
+    delete main_szal;
+    main_szal = nullptr;
 }

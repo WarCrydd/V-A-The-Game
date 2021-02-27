@@ -132,7 +132,13 @@
     <ClCompile Include="GrafikObj.cpp">
       <Filter>Source Files\Motor\Grafika</Filter>
     </ClCompile>
-    <ClCompile Include="MyVector.cpp">
+    <ClCompile Include="ElemiFizikObj.cpp">
+      <Filter>Source Files\Motor\Fizika</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupFizikObj.cpp">
+      <Filter>Source Files\Motor\Fizika</Filter>
+    </ClCompile>
+    <ClCompile Include="MozgasAllapot.cpp">
       <Filter>Source Files\Motor\Fizika</Filter>
     </ClCompile>
   </ItemGroup>
@@ -173,7 +179,13 @@
     <ClInclude Include="GrafikObj.h">
       <Filter>Header Files\Motor\Grafika</Filter>
     </ClInclude>
-    <ClInclude Include="MyVector.h">
+    <ClInclude Include="ElemiFizikObj.h">
+      <Filter>Header Files\Motor\Fizika</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupFizikObj.h">
+      <Filter>Header Files\Motor\Fizika</Filter>
+    </ClInclude>
+    <ClInclude Include="MozgasAllapot.h">
       <Filter>Header Files\Motor\Fizika</Filter>
     </ClInclude>
   </ItemGroup>

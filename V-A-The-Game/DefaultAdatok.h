@@ -14,7 +14,7 @@ namespace Kijelzo
 
 namespace Render
 {
-    static int hasznaltDriver = 0;
+    static int hasznaltDriver = 3;
 }
 
 namespace Gui
