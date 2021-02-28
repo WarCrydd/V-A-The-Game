@@ -13,7 +13,7 @@
 #include "FizikObj.h"
 #include "ElemiFizikObj.h" 
 
-#define DRIVER 3
+#define DRIVER 2
 // a használt driver (-1-nél kisebb értéknél ki irja a lehetõségeket)
 
 using namespace std;
