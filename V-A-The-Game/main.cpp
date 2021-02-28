@@ -33,8 +33,6 @@ int main(int argc, char* args[])
 		return 0;
 	}
 
-
-
 	GrafikEngine* g = new GrafikEngine();
 	
 	FizikObj* fobj = new ElemiFizikObj(0, 0, 0);
