@@ -14,6 +14,7 @@ protected:
     list<FizikObj*>* entitasok;
     thread* main_szal;
     bool fut = false;
+
 public:
     FizEngine();
     ~FizEngine();
@@ -23,5 +24,7 @@ public:
 
     void start();
     void stop();
+
+    bool getFut();
 };
 

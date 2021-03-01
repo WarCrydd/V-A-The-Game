@@ -100,6 +100,9 @@
     <Filter Include="Source Files\Felépítés\Épitőelemek\Univerzális">
       <UniqueIdentifier>{cb0b5ff3-73ca-4bd0-a0f4-cb5481a40232}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Motor\Játék">
+      <UniqueIdentifier>{d31f1333-ee41-4560-b380-e8739dbe5612}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

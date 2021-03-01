@@ -46,3 +46,8 @@ void FizEngine::stop()
     delete main_szal;
     main_szal = nullptr;
 }
+
+bool FizEngine::getFut()
+{
+    return fut;
+}

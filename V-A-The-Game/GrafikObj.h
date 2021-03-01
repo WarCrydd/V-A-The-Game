@@ -24,7 +24,9 @@ public:
     void texturaKi();
     void pontokFrisit();
     bool getBetoltve();
+
     SDL_Texture* getTexture();
+
     SDL_Rect* getKeret();
     SDL_Rect* getKeret(SDL_Point* pont, int hosz, int magassag);
     SDL_Point* getKozepPont();
