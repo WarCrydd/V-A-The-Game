@@ -31,7 +31,7 @@ namespace Eltolasok
         pont -> y = negyzet->y + negyzet->h / 2;
     };
 
-    auto LineLineIntersection = [](SDL_Point* A, SDL_Point* B, SDL_Point* C, SDL_Point* D, SDL_Point* result)
+    auto VANKOZOSPONT = [](SDL_Point* A, SDL_Point* B, SDL_Point* C, SDL_Point* D, SDL_Point* result)
     {
         // Line AB represented as a1x + b1y = c1 
         double a1 = B->y - A->y;
@@ -43,15 +43,15 @@ namespace Eltolasok
         double b2 = C->x - D->x;
         double c2 = a2 * (C->x) + b2 * (C->y);
 
-        double determinant = a1 * b2 - a2 * b1;
-        if (determinant == 0)
+        double d = a1 * b2 - a2 * b1;
+        if (d == 0)
         {
             return result;
         }
         else
         {
-            int x = (b2 * c1 - b1 * c2) / determinant;
-            int y = (a1 * c2 - a2 * c1) / determinant;
+            int x = (b2 * c1 - b1 * c2) / d;
+            int y = (a1 * c2 - a2 * c1) / d;
 
             result->x = x;
             result->y = y;

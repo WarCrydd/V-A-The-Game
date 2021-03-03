@@ -3,7 +3,10 @@
 
 FizikObj::FizikObj(int x, int y, int r)
 {
-    mozgasAllapot = new MozgasAllapot(x, y, r, nullptr, nullptr);
+    SDL_Point* a = new SDL_Point();
+    a->x = 0;
+    a->y = 0;
+    mozgasAllapot = new MozgasAllapot(x, y, r, nullptr);
 }
 
 FizikObj::FizikObj(MozgasAllapot* _m)
@@ -39,8 +42,4 @@ SDL_Point* FizikObj::getKozepPont()
 int* FizikObj::getForgatas()
 {
     return mozgasAllapot->getForgas();
-}
-
-void FizikObj::update()
-{
 }

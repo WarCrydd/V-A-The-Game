@@ -26,11 +26,16 @@ void FizEngine::start()
 {
     auto futas = [=]() 
     {
+        chrono::system_clock::time_point clStart = chrono::system_clock().now();
+        chrono::system_clock::time_point clEnd;
         while (fut)
         {
+            clEnd = chrono::system_clock().now();
+            chrono::duration<double, milli> diff = clEnd - clStart;
+            double eltelt_ido = diff.count();
             for (auto elem : *entitasok)
             {
-                elem->update();
+                elem->update(eltelt_ido);
             }
         }
     };

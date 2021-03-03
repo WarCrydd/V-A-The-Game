@@ -13,6 +13,6 @@ protected:
 public:
     ElemiFizikObj(int x, int y, int r);
 
-    virtual void update() override;
+    virtual void update(double ido) override;
 };
 

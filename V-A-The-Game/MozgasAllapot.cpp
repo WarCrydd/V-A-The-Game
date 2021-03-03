@@ -1,13 +1,11 @@
 #include "MozgasAllapot.h"
 
-MozgasAllapot::MozgasAllapot(int x, int y, int r, SDL_Point* _mozgas, SDL_Point* _gyorsulas)
+MozgasAllapot::MozgasAllapot(int x, int y, int r, SDL_Point* _mozgas)
 {
     kozepPont = new SDL_Point();
     kozepPont->x = x;
     kozepPont->y = y;
 
-    mozgas = _mozgas;
-    gyorsulas = _gyorsulas;
     forgas = new int(r);
 }
 
@@ -27,32 +25,17 @@ void MozgasAllapot::setKozepPont(SDL_Point* _p)
 
 SDL_Point* MozgasAllapot::getMozgas()
 {
-    return mozgas;
+    return sebeseg;
 }
 
 void MozgasAllapot::setMozgas(SDL_Point* _m)
 {
-    if (mozgas != nullptr)
+    if (sebeseg != nullptr)
     {
-        delete mozgas;
+        delete sebeseg;
     }
 
-    mozgas = _m;
-}
-
-SDL_Point* MozgasAllapot::getGyorsulas()
-{
-    return gyorsulas;
-}
-
-void MozgasAllapot::setGyorsulas(SDL_Point* _gy)
-{
-    if (gyorsulas != nullptr)
-    {
-        delete gyorsulas;
-    }
-
-    gyorsulas = _gy;
+    sebeseg = _m;
 }
 
 int* MozgasAllapot::getForgas()
@@ -68,4 +51,10 @@ void MozgasAllapot::setForgas(int* _f)
     }
 
     forgas = _f;
+}
+
+void MozgasAllapot::update(double ido)
+{
+    kozepPont->x += sebeseg->x * ido;
+    kozepPont->y += sebeseg->y * ido;
 }

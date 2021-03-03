@@ -12,6 +12,7 @@
 #include "EpitoElem.h"
 #include "FizikObj.h"
 #include "ElemiFizikObj.h" 
+#include "Muveletek.h"
 
 #define DRIVER 3
 // a használt driver (-1-nél kisebb értéknél ki irja a lehetõségeket)

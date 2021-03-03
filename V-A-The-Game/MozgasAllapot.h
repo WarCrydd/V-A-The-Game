@@ -4,12 +4,11 @@ class MozgasAllapot
 {
 protected:
     SDL_Point* kozepPont = nullptr;
-    SDL_Point* mozgas = nullptr;
-    SDL_Point* gyorsulas = nullptr;
+    SDL_Point* sebeseg = nullptr;
     int* forgas = nullptr;
 
 public:
-    MozgasAllapot(int x, int y, int r, SDL_Point* _mozgas, SDL_Point* _gyorsulas);
+    MozgasAllapot(int x, int y, int r, SDL_Point* _mozgas);
 
     SDL_Point* getKozepPont();
     void setKozepPont(SDL_Point* _p);
@@ -17,10 +16,9 @@ public:
     SDL_Point* getMozgas();
     void setMozgas(SDL_Point* _m);
 
-    SDL_Point* getGyorsulas();
-    void setGyorsulas(SDL_Point* _gy);
-
     int* getForgas();
     void setForgas(int* _f);
+
+    void update(double ido);
 };
 

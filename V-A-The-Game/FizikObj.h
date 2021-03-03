@@ -21,6 +21,6 @@ public:
     SDL_Point* getKozepPont();
     int* getForgatas();
 
-    virtual void update() = 0;
+    virtual void update(double ido) = 0;
 
 };
