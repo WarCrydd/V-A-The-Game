@@ -13,12 +13,12 @@ public:
     SDL_Point* getKozepPont();
     void setKozepPont(SDL_Point* _p);
 
-    SDL_Point* getMozgas();
-    void setMozgas(SDL_Point* _m);
+    SDL_Point* getSebesseg();
+    void setSebesseg(SDL_Point* _m);
 
     int* getForgas();
     void setForgas(int* _f);
 
-    void update(double ido);
+    void update(int ido);
 };
 

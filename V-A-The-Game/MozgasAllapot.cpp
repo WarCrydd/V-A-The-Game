@@ -5,7 +5,18 @@ MozgasAllapot::MozgasAllapot(int x, int y, int r, SDL_Point* _mozgas)
     kozepPont = new SDL_Point();
     kozepPont->x = x;
     kozepPont->y = y;
+    if (_mozgas == nullptr)
+    {
+        sebeseg = new SDL_Point();
+        sebeseg->x = 0;
+        sebeseg->y = 0;
+    }
+    else
+    {
+        sebeseg = _mozgas;
+    }
 
+    sebeseg = _mozgas;
     forgas = new int(r);
 }
 
@@ -23,12 +34,12 @@ void MozgasAllapot::setKozepPont(SDL_Point* _p)
     kozepPont = _p;
 }
 
-SDL_Point* MozgasAllapot::getMozgas()
+SDL_Point* MozgasAllapot::getSebesseg()
 {
     return sebeseg;
 }
 
-void MozgasAllapot::setMozgas(SDL_Point* _m)
+void MozgasAllapot::setSebesseg(SDL_Point* _m)
 {
     if (sebeseg != nullptr)
     {
@@ -53,7 +64,7 @@ void MozgasAllapot::setForgas(int* _f)
     forgas = _f;
 }
 
-void MozgasAllapot::update(double ido)
+void MozgasAllapot::update(int ido)
 {
     kozepPont->x += sebeseg->x * ido;
     kozepPont->y += sebeseg->y * ido;

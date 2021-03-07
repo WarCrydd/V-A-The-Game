@@ -13,6 +13,7 @@
 #include "FizikObj.h"
 #include "ElemiFizikObj.h" 
 #include "Muveletek.h"
+#include "FizEngine.h"
 
 #define DRIVER 3
 // a használt driver (-1-nél kisebb értéknél ki irja a lehetõségeket)
@@ -37,13 +38,15 @@ int main(int argc, char* args[])
 	GrafikEngine* g = new GrafikEngine();
 	
 	FizikObj* fobj = new ElemiFizikObj(0, 0, 0);
+	FizikObj* fobj2 = new ElemiFizikObj(120, 120, 0);
 	GrafikObj* gobj = new GrafikObj(fobj);
+	GrafikObj* gobj2 = new GrafikObj(fobj2);
 
-	EgysegNegyzet* probaelem = new EgysegNegyzet(200, 60, fobj, gobj);
+	EgysegNegyzet* probaelem = new EgysegNegyzet(40, 40, fobj, gobj);
+
+	EgysegNegyzet* probaelem2 = new EgysegNegyzet(60, 60, fobj2, gobj2);
 
 	g->setKozepPont(probaelem->getBody()->getKozepPont());
-
-	SDL_Renderer* renderer = g->getRenderer();
 
 #pragma region Surface létrehozása
 
@@ -58,19 +61,25 @@ int main(int argc, char* args[])
 #pragma endregion
 
 	probaelem->getMegjelenes()->setKinezet(surf);
+	probaelem2->getMegjelenes()->setKinezet(surf);
 
 	g->addObj(probaelem->getMegjelenes());
+	SDL_Delay(10);
+	g->addObj(probaelem2->getMegjelenes());
 
 	cout << g->start(60) << endl;
+	FizEngine f;
+	f.addEntitas(fobj2);
+	f.start();
+
 	SDL_Delay(2000);
+	
 
-	int* forog = probaelem->getBody()->getForgatas();
 
-	for (int i = 0; i < 1000; i++)
-	{
-		*forog += 1;
-		SDL_Delay(4);
-	}
+	SDL_Point* pp = probaelem2->getBody()->getMozgasAllapot()->getSebesseg();
+	pp->x = 1;
+
+	SDL_Delay(2000);
 
 	g->removeObj(probaelem->getMegjelenes());
 

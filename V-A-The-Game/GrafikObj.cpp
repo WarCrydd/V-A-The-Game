@@ -13,7 +13,7 @@ void GrafikObj::setKinezet(SDL_Surface* _kinezet)
 {
     if (kinezet != nullptr)
     {
-        delete kinezet;
+        SDL_FreeSurface(kinezet);
         kinezet = nullptr;
     }
 
