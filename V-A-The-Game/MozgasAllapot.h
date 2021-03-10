@@ -11,14 +11,11 @@ public:
     MozgasAllapot(int x, int y, int r, SDL_Point* _mozgas);
 
     SDL_Point* getKozepPont();
-    void setKozepPont(SDL_Point* _p);
 
     SDL_Point* getSebesseg();
-    void setSebesseg(SDL_Point* _m);
 
     int* getForgas();
-    void setForgas(int* _f);
-
+    
     void update(int ido);
 };
 

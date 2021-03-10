@@ -9,8 +9,6 @@ EpitoElem::EpitoElem(int _m, int _h, FizikObj* _body, GrafikObj* _megjelenes) : 
     befogo->w = tHossz;
     befogo->x = 0;
     befogo->y = 0;
-
-    megjelenes->pontokFrisit();
 }
 
 void EpitoElem::update()

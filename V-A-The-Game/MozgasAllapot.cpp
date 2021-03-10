@@ -16,7 +16,6 @@ MozgasAllapot::MozgasAllapot(int x, int y, int r, SDL_Point* _mozgas)
         sebeseg = _mozgas;
     }
 
-    sebeseg = _mozgas;
     forgas = new int(r);
 }
 
@@ -25,43 +24,14 @@ SDL_Point* MozgasAllapot::getKozepPont()
     return kozepPont;
 }
 
-void MozgasAllapot::setKozepPont(SDL_Point* _p)
-{
-    if (kozepPont != nullptr)
-    {
-        delete kozepPont;
-    }
-    kozepPont = _p;
-}
-
 SDL_Point* MozgasAllapot::getSebesseg()
 {
     return sebeseg;
 }
 
-void MozgasAllapot::setSebesseg(SDL_Point* _m)
-{
-    if (sebeseg != nullptr)
-    {
-        delete sebeseg;
-    }
-
-    sebeseg = _m;
-}
-
 int* MozgasAllapot::getForgas()
 {
     return forgas;
-}
-
-void MozgasAllapot::setForgas(int* _f)
-{
-    if (forgas != nullptr)
-    {
-        delete forgas;
-    }
-
-    forgas = _f;
 }
 
 void MozgasAllapot::update(int ido)

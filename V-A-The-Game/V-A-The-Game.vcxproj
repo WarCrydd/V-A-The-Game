@@ -23,6 +23,7 @@
     <ClCompile Include="ElemiFizikObj.cpp" />
     <ClCompile Include="EpitettObj.cpp" />
     <ClCompile Include="EpitoElem.cpp" />
+    <ClCompile Include="EventEngine.cpp" />
     <ClCompile Include="FizEngine.cpp" />
     <ClCompile Include="FizikObj.cpp" />
     <ClCompile Include="GrafikEngine.cpp" />
@@ -40,6 +41,7 @@
     <ClInclude Include="Enumok.h" />
     <ClInclude Include="EpitettObj.h" />
     <ClInclude Include="EpitoElem.h" />
+    <ClInclude Include="EventEngine.h" />
     <ClInclude Include="FizEngine.h" />
     <ClInclude Include="FizikObj.h" />
     <ClInclude Include="GrafikEngine.h" />

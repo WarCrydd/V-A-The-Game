@@ -6,11 +6,12 @@ void GrafikEngine::frame()
     SDL_RenderClear(main_renderer);
     for (auto elem : *ter)
     {
+        elem->pontokFrisit(nagyitas);
         SDL_RenderCopyEx(
             main_renderer,
             elem->getTexture(),
             NULL,
-            elem->getKeret(kozepPont, ablakSzelesseg / 2, ablakMagassag / 2),
+            elem->getKeret(kozepPont, ablakSzelesseg / 2, ablakMagassag / 2, nagyitas),
             *elem->getForgatas(),
             elem->getForgatasiKozepPont(),
             SDL_FLIP_HORIZONTAL);
@@ -28,9 +29,15 @@ GrafikEngine::GrafikEngine()
         Kijelzo::szelesseg, 
         Kijelzo::magassag, 
         Kijelzo::fullScreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0);
-
-    ablakMagassag = Kijelzo::magassag;
-    ablakSzelesseg = Kijelzo::szelesseg;
+    if (Kijelzo::fullScreen)
+    {
+        SDL_GetWindowSize(main_window, &ablakSzelesseg, &ablakMagassag);
+    }
+    else
+    {
+        ablakMagassag = Kijelzo::magassag;
+        ablakSzelesseg = Kijelzo::szelesseg;
+    }
 
     main_renderer = SDL_CreateRenderer(main_window, Render::hasznaltDriver, SDL_RENDERER_ACCELERATED);
 }

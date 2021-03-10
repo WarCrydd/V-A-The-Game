@@ -1,15 +1,12 @@
 
 #include "FizikObj.h"
 
-FizikObj::FizikObj(int x, int y, int r)
+FizikObj::FizikObj(int x, int y, int r, int h, int w)
 {
-    SDL_Point* a = new SDL_Point();
-    a->x = 0;
-    a->y = 0;
-    SDL_Point* pp = new SDL_Point();
-    pp->x = 0;
-    pp->y = 0;
-    mozgasAllapot = new MozgasAllapot(x, y, r, pp);
+    befogo = new SDL_Rect();
+    befogo->h = h;
+    befogo->w = w;
+    mozgasAllapot = new MozgasAllapot(x, y, r, nullptr);
 }
 
 FizikObj::FizikObj(MozgasAllapot* _m)
@@ -17,9 +14,14 @@ FizikObj::FizikObj(MozgasAllapot* _m)
     mozgasAllapot = _m;
 }
 
+SDL_Rect* FizikObj::getBefogo()
+{
+    return befogo;
+}
+
 MozgasAllapot* FizikObj::getMozgasAllapot()
 {
-    return nullptr;
+    return mozgasAllapot;
 }
 
 void FizikObj::setMozgasAllapot(MozgasAllapot* _m)
@@ -30,19 +32,4 @@ void FizikObj::setMozgasAllapot(MozgasAllapot* _m)
     }
 
     mozgasAllapot = _m;
-}
-
-void FizikObj::setKozepPont(SDL_Point* _kozepPont)
-{
-    mozgasAllapot->setKozepPont(_kozepPont);
-}
-
-SDL_Point* FizikObj::getKozepPont()
-{
-    return mozgasAllapot->getKozepPont();
-}
-
-int* FizikObj::getForgatas()
-{
-    return mozgasAllapot->getForgas();
 }

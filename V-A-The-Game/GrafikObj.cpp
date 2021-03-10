@@ -3,10 +3,13 @@
 
 GrafikObj::GrafikObj(FizikObj* _f)
 {
-    keret = new SDL_Rect();
-    kozepPont = _f->getKozepPont();
-    forgatas = _f->getForgatas();
+    testKeret = new SDL_Rect();
     testKozepPont = new SDL_Point();
+
+    kozepPont = _f->getMozgasAllapot()->getKozepPont();
+    keret = _f->getBefogo();
+    forgatas = _f->getMozgasAllapot()->getForgas();
+    
 }
 
 void GrafikObj::setKinezet(SDL_Surface* _kinezet)
@@ -39,10 +42,13 @@ void GrafikObj::texturaKi()
     }
 }
 
-void GrafikObj::pontokFrisit()
+void GrafikObj::pontokFrisit(int arany)
 {
-    testKozepPont->x = keret->w / 2;
-    testKozepPont->y = keret->h / 2;
+    testKeret->h = keret->h / arany;
+    testKeret->w = keret->w / arany;
+
+    testKozepPont->x = testKeret->w / 2;
+    testKozepPont->y = testKeret->h / 2;
 }
 
 bool GrafikObj::getBetoltve()
@@ -61,14 +67,14 @@ SDL_Texture* GrafikObj::getTexture()
 
 SDL_Rect* GrafikObj::getKeret()
 {
-    return keret;
+    return testKeret;
 }
 
-SDL_Rect* GrafikObj::getKeret(SDL_Point* pont, int hosz, int magassag)
+SDL_Rect* GrafikObj::getKeret(SDL_Point* pont, int hosz, int magassag, int arany)
 {
-    keret->x = kozepPont->x - (pont->x - hosz) - keret->w / 2;
-    keret->y = kozepPont->y - (pont->y - magassag) - keret->h / 2;
-    return keret;
+    testKeret->x = (kozepPont->x - (pont->x - hosz * arany) - testKeret->w / 2) / arany;
+    testKeret->y = (kozepPont->y - (pont->y - magassag * arany) - testKeret->h / 2) / arany;
+    return testKeret;
 }
 
 SDL_Point* GrafikObj::getKozepPont()

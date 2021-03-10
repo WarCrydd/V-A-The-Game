@@ -103,6 +103,9 @@
     <Filter Include="Header Files\Motor\Játék">
       <UniqueIdentifier>{d31f1333-ee41-4560-b380-e8739dbe5612}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Motor\Játék">
+      <UniqueIdentifier>{6d6c6757-2d48-460f-8604-24ba0c45404e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -143,6 +146,9 @@
     </ClCompile>
     <ClCompile Include="MozgasAllapot.cpp">
       <Filter>Source Files\Motor\Fizika</Filter>
+    </ClCompile>
+    <ClCompile Include="EventEngine.cpp">
+      <Filter>Source Files\Motor\Játék</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +196,9 @@
     </ClInclude>
     <ClInclude Include="MozgasAllapot.h">
       <Filter>Header Files\Motor\Fizika</Filter>
+    </ClInclude>
+    <ClInclude Include="EventEngine.h">
+      <Filter>Header Files\Motor\Játék</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -37,8 +37,8 @@ int main(int argc, char* args[])
 
 	GrafikEngine* g = new GrafikEngine();
 	
-	FizikObj* fobj = new ElemiFizikObj(0, 0, 0);
-	FizikObj* fobj2 = new ElemiFizikObj(120, 120, 0);
+	FizikObj* fobj = new ElemiFizikObj(0, 0, 0, 8000, 8000);
+	FizikObj* fobj2 = new ElemiFizikObj(12000, 12000, 0, 10000, 10000);
 	GrafikObj* gobj = new GrafikObj(fobj);
 	GrafikObj* gobj2 = new GrafikObj(fobj2);
 
@@ -46,7 +46,7 @@ int main(int argc, char* args[])
 
 	EgysegNegyzet* probaelem2 = new EgysegNegyzet(60, 60, fobj2, gobj2);
 
-	g->setKozepPont(probaelem->getBody()->getKozepPont());
+	g->setKozepPont(probaelem->getBody()->getMozgasAllapot()->getKozepPont());
 
 #pragma region Surface létrehozása
 
@@ -68,24 +68,21 @@ int main(int argc, char* args[])
 	g->addObj(probaelem2->getMegjelenes());
 
 	cout << g->start(60) << endl;
-	FizEngine f;
-	f.addEntitas(fobj2);
-	f.start();
+	FizEngine* f = new FizEngine();
+	f->addEntitas(fobj2);
+	f->start();
 
-	SDL_Delay(2000);
+	SDL_Delay(4000);
 	
-
-
 	SDL_Point* pp = probaelem2->getBody()->getMozgasAllapot()->getSebesseg();
-	pp->x = 1;
+	pp->x = 10;
 
-	SDL_Delay(2000);
+	SDL_Delay(4000);
 
 	g->removeObj(probaelem->getMegjelenes());
 
-	SDL_Delay(2000);
-
 	g->stop();
+	f->stop();
 
 	delete g;
 

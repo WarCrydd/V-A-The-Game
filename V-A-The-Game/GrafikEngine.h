@@ -21,6 +21,7 @@ private:
 
     int ablakMagassag = 0;
     int ablakSzelesseg = 0;
+    int nagyitas = 500;
     bool aktivalva = false;
     int fps = 60;
    

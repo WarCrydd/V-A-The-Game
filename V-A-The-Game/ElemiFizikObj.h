@@ -10,7 +10,7 @@ protected:
     double ido_maradek = 0;
 
 public:
-    ElemiFizikObj(int x, int y, int r);
+    ElemiFizikObj(int x, int y, int r, int h, int w);
 
     virtual void update(double ido) override;
 };
