@@ -14,6 +14,7 @@
 #include "ElemiFizikObj.h" 
 #include "Muveletek.h"
 #include "FizEngine.h"
+#include "EventEngine.h"
 
 #define DRIVER 3
 // a használt driver (-1-nél kisebb értéknél ki irja a lehetõségeket)
@@ -36,6 +37,7 @@ int main(int argc, char* args[])
 	}
 
 	GrafikEngine* g = new GrafikEngine();
+	EventEngine* evEngine = new EventEngine();
 	
 	FizikObj* fobj = new ElemiFizikObj(0, 0, 0, 8000, 8000);
 	FizikObj* fobj2 = new ElemiFizikObj(12000, 12000, 0, 10000, 10000);

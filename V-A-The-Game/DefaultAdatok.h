@@ -1,6 +1,10 @@
 #pragma once
 
 #include <string>
+#include <map>
+#include <SDL.h>
+
+#include "Enumok.h"
 
 using namespace std;
 
@@ -43,4 +47,17 @@ namespace Kinezet
         static int b = 0;
         static int a = 0;
     }
+}
+
+namespace Iranyitas
+{
+    using namespace Iranyitas;
+    static map<SDL_KeyCode, Test> tesztMozgas
+    {
+        {SDLK_UP, Test::FEL},
+        {SDLK_RIGHT, Test::JOBRA},
+        {SDLK_LEFT, Test::BALRA},
+        {SDLK_DOWN, Test::LE},
+        {SDLK_SPACE, Test::STOP}
+    };
 }

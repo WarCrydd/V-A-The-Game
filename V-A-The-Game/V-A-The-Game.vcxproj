@@ -33,6 +33,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MozgasAllapot.cpp" />
     <ClCompile Include="MyObj.cpp" />
+    <ClCompile Include="VezerloObj.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DefaultAdatok.h" />
@@ -51,6 +52,7 @@
     <ClInclude Include="MozgasAllapot.h" />
     <ClInclude Include="Muveletek.h" />
     <ClInclude Include="MyObj.h" />
+    <ClInclude Include="VezerloObj.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
