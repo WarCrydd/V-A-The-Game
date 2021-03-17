@@ -10,7 +10,7 @@
 #include "GrafikObj.h"
 #include "EgysegNegyzet.h"
 #include "EpitoElem.h"
-#include "FizikObj.h"
+#include "BaseFizikObj.h"
 #include "ElemiFizikObj.h" 
 #include "Muveletek.h"
 #include "FizEngine.h"
@@ -39,8 +39,8 @@ int main(int argc, char* args[])
 	GrafikEngine* g = new GrafikEngine();
 	EventEngine* evEngine = new EventEngine();
 	
-	FizikObj* fobj = new ElemiFizikObj(0, 0, 0, 8000, 8000);
-	FizikObj* fobj2 = new ElemiFizikObj(12000, 12000, 0, 10000, 10000);
+	BaseFizikObj* fobj = new ElemiFizikObj(0, 0, 0, 8000, 8000);
+	BaseFizikObj* fobj2 = new ElemiFizikObj(12000, 12000, 0, 10000, 10000);
 	GrafikObj* gobj = new GrafikObj(fobj);
 	GrafikObj* gobj2 = new GrafikObj(fobj2);
 

@@ -21,11 +21,12 @@
   <ItemGroup>
     <ClCompile Include="EgysegNegyzet.cpp" />
     <ClCompile Include="ElemiFizikObj.cpp" />
+    <ClCompile Include="ElemiLelek.cpp" />
     <ClCompile Include="EpitettObj.cpp" />
     <ClCompile Include="EpitoElem.cpp" />
     <ClCompile Include="EventEngine.cpp" />
     <ClCompile Include="FizEngine.cpp" />
-    <ClCompile Include="FizikObj.cpp" />
+    <ClCompile Include="BaseFizikObj.cpp" />
     <ClCompile Include="GrafikEngine.cpp" />
     <ClCompile Include="GrafikObj.cpp" />
     <ClCompile Include="GroupFizikObj.cpp" />
@@ -36,15 +37,17 @@
     <ClCompile Include="VezerloObj.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseObj.h" />
     <ClInclude Include="DefaultAdatok.h" />
     <ClInclude Include="EgysegNegyzet.h" />
     <ClInclude Include="ElemiFizikObj.h" />
+    <ClInclude Include="ElemiLelek.h" />
     <ClInclude Include="Enumok.h" />
     <ClInclude Include="EpitettObj.h" />
     <ClInclude Include="EpitoElem.h" />
     <ClInclude Include="EventEngine.h" />
     <ClInclude Include="FizEngine.h" />
-    <ClInclude Include="FizikObj.h" />
+    <ClInclude Include="BaseFizikObj.h" />
     <ClInclude Include="GrafikEngine.h" />
     <ClInclude Include="GrafikObj.h" />
     <ClInclude Include="GroupFizikObj.h" />

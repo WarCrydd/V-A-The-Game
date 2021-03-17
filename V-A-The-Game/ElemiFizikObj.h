@@ -1,10 +1,10 @@
 #pragma once
 #include <chrono>
 
-#include "FizikObj.h"
+#include "BaseFizikObj.h"
 
 using namespace std;
-class ElemiFizikObj : public FizikObj
+class ElemiFizikObj : public BaseFizikObj
 {
 protected:
     double ido_maradek = 0;
@@ -14,4 +14,3 @@ public:
 
     virtual void update(double ido) override;
 };
-

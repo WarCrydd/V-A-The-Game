@@ -1,7 +1,7 @@
 
 #include "GrafikObj.h"
 
-GrafikObj::GrafikObj(FizikObj* _f)
+GrafikObj::GrafikObj(BaseFizikObj* _f)
 {
     testKeret = new SDL_Rect();
     testKozepPont = new SDL_Point();

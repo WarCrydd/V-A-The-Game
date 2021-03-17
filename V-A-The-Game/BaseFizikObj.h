@@ -4,16 +4,18 @@
 #include <chrono>
 
 #include "MozgasAllapot.h"
-class FizikObj
+#include "BaseObj.h"
+
+class BaseFizikObj : public BaseObj
 {
 protected:
     MozgasAllapot* mozgasAllapot = nullptr;
     SDL_Rect* befogo = nullptr;
 
 public:
-    FizikObj(int x, int y, int r, int h, int w);
+    BaseFizikObj(int x, int y, int r, int h, int w);
 
-    FizikObj(MozgasAllapot* _m);
+    BaseFizikObj(MozgasAllapot* _m);
 
     SDL_Rect* getBefogo();
 

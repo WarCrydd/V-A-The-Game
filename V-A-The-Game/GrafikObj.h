@@ -1,11 +1,11 @@
 #pragma once
 #include <SDL.h>
 
-#include "FizikObj.h"
+#include "BaseFizikObj.h"
 #include "MozgasAllapot.h"
 
 using namespace std;
-class GrafikObj
+class GrafikObj : public BaseObj
 {
 protected:
     SDL_Texture* textura = nullptr;
@@ -23,7 +23,7 @@ protected:
     bool betoltve = false;
 
 public:
-    GrafikObj(FizikObj* _f);
+    GrafikObj(BaseFizikObj* _f);
 
     void setKinezet(SDL_Surface* _kinezet);
     void texturaBe(SDL_Renderer* render);

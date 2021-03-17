@@ -1,7 +1,7 @@
 
-#include "FizikObj.h"
+#include "BaseFizikObj.h"
 
-FizikObj::FizikObj(int x, int y, int r, int h, int w)
+BaseFizikObj::BaseFizikObj(int x, int y, int r, int h, int w)
 {
     befogo = new SDL_Rect();
     befogo->h = h;
@@ -9,22 +9,22 @@ FizikObj::FizikObj(int x, int y, int r, int h, int w)
     mozgasAllapot = new MozgasAllapot(x, y, r, nullptr);
 }
 
-FizikObj::FizikObj(MozgasAllapot* _m)
+BaseFizikObj::BaseFizikObj(MozgasAllapot* _m)
 {
     mozgasAllapot = _m;
 }
 
-SDL_Rect* FizikObj::getBefogo()
+SDL_Rect* BaseFizikObj::getBefogo()
 {
     return befogo;
 }
 
-MozgasAllapot* FizikObj::getMozgasAllapot()
+MozgasAllapot* BaseFizikObj::getMozgasAllapot()
 {
     return mozgasAllapot;
 }
 
-void FizikObj::setMozgasAllapot(MozgasAllapot* _m)
+void BaseFizikObj::setMozgasAllapot(MozgasAllapot* _m)
 {
     if (mozgasAllapot != nullptr)
     {

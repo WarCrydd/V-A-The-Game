@@ -1,6 +1,6 @@
 #include "ElemiFizikObj.h"
 
-ElemiFizikObj::ElemiFizikObj(int x, int y, int r, int h, int w) : FizikObj(x, y, r, h ,w)
+ElemiFizikObj::ElemiFizikObj(int x, int y, int r, int h, int w) : BaseFizikObj(x, y, r, h ,w)
 {
     
 }

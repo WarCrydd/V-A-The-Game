@@ -6,6 +6,7 @@
 #include <SDL.h>
 
 #include "Enumok.h"
+#include "BaseFizikObj.h"
 
 using namespace std;
 using namespace Iranyitas;
@@ -13,10 +14,9 @@ using namespace Iranyitas;
 class VezerloObj
 {
 protected:
-    map<SDL_KeyCode, Test> utasitasok;
-    //A test nem jo!!!
-
+    
 public:
     VezerloObj();
-};
 
+    virtual void objUpdate(SDL_Event& e) = 0;
+};

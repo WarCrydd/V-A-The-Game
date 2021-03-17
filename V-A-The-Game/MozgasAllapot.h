@@ -1,6 +1,9 @@
 #pragma once
 #include <SDL.h>
-class MozgasAllapot
+
+#include "BaseObj.h"
+
+class MozgasAllapot : public BaseObj
 {
 protected:
     SDL_Point* kozepPont = nullptr;
@@ -18,4 +21,3 @@ public:
     
     void update(int ido);
 };
-

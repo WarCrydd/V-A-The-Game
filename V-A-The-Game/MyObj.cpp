@@ -1,6 +1,6 @@
 #include "MyObj.h"
 
-MyObj::MyObj(FizikObj* _body, GrafikObj* _megjelenes)
+MyObj::MyObj(BaseFizikObj* _body, GrafikObj* _megjelenes)
 {
     body = _body;
     megjelenes = _megjelenes;
@@ -11,7 +11,7 @@ MyObj::~MyObj()
   
 }
 
-FizikObj* MyObj::getBody()
+BaseFizikObj* MyObj::getBody()
 {
     return body;
 }

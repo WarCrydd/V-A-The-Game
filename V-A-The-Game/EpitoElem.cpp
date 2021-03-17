@@ -1,6 +1,6 @@
 #include "EpitoElem.h"
 
-EpitoElem::EpitoElem(int _m, int _h, FizikObj* _body, GrafikObj* _megjelenes) : MyObj( _body, _megjelenes)
+EpitoElem::EpitoElem(int _m, int _h, BaseFizikObj* _body, GrafikObj* _megjelenes) : MyObj( _body, _megjelenes)
 {
     tMagassag = _m;
     tHossz = _h;

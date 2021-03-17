@@ -112,6 +112,18 @@
     <Filter Include="Source Files\Motor\Játék\Irányitás">
       <UniqueIdentifier>{0798986d-2d50-4553-8ddc-609fe3d1d4c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Motor\Fizika\Lélek">
+      <UniqueIdentifier>{564cd63b-a14d-4f4b-9f99-465d1807958e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Motor\Fizika\Lélek">
+      <UniqueIdentifier>{4d564a4a-02fd-48b6-8ec5-13e9c83486c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Motor\Fizika\Álapot tárolók">
+      <UniqueIdentifier>{01fe2f28-1ff2-42fa-b957-5c64f6faa37e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Motor\Fizika\Álapot tárolók">
+      <UniqueIdentifier>{f54e383d-5308-4b69-ba7f-fb15e23d28c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -125,9 +137,6 @@
     </ClCompile>
     <ClCompile Include="GrafikEngine.cpp">
       <Filter>Source Files\Motor\Grafika</Filter>
-    </ClCompile>
-    <ClCompile Include="FizikObj.cpp">
-      <Filter>Source Files\Motor\Fizika</Filter>
     </ClCompile>
     <ClCompile Include="EpitoElem.cpp">
       <Filter>Source Files\Felépítés\Épitőelemek</Filter>
@@ -144,28 +153,31 @@
     <ClCompile Include="GrafikObj.cpp">
       <Filter>Source Files\Motor\Grafika</Filter>
     </ClCompile>
-    <ClCompile Include="ElemiFizikObj.cpp">
-      <Filter>Source Files\Motor\Fizika</Filter>
-    </ClCompile>
-    <ClCompile Include="GroupFizikObj.cpp">
-      <Filter>Source Files\Motor\Fizika</Filter>
-    </ClCompile>
-    <ClCompile Include="MozgasAllapot.cpp">
-      <Filter>Source Files\Motor\Fizika</Filter>
-    </ClCompile>
     <ClCompile Include="EventEngine.cpp">
       <Filter>Source Files\Motor\Játék</Filter>
     </ClCompile>
     <ClCompile Include="VezerloObj.cpp">
       <Filter>Source Files\Motor\Játék\Irányitás</Filter>
     </ClCompile>
+    <ClCompile Include="ElemiFizikObj.cpp">
+      <Filter>Source Files\Motor\Fizika\Álapot tárolók</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseFizikObj.cpp">
+      <Filter>Source Files\Motor\Fizika\Álapot tárolók</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupFizikObj.cpp">
+      <Filter>Source Files\Motor\Fizika\Álapot tárolók</Filter>
+    </ClCompile>
+    <ClCompile Include="MozgasAllapot.cpp">
+      <Filter>Source Files\Motor\Fizika\Álapot tárolók</Filter>
+    </ClCompile>
+    <ClCompile Include="ElemiLelek.cpp">
+      <Filter>Source Files\Motor\Fizika\Lélek</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyObj.h">
       <Filter>Header Files\Felépítés</Filter>
-    </ClInclude>
-    <ClInclude Include="FizEngine.h">
-      <Filter>Header Files\Motor\Fizika</Filter>
     </ClInclude>
     <ClInclude Include="GrafikEngine.h">
       <Filter>Header Files\Motor\Grafika</Filter>
@@ -178,9 +190,6 @@
     </ClInclude>
     <ClInclude Include="Enumok.h">
       <Filter>Header Files\Z_Fügetlenek</Filter>
-    </ClInclude>
-    <ClInclude Include="FizikObj.h">
-      <Filter>Header Files\Motor\Fizika</Filter>
     </ClInclude>
     <ClInclude Include="EpitoElem.h">
       <Filter>Header Files\Felépítés\Épitőelemek</Filter>
@@ -197,12 +206,6 @@
     <ClInclude Include="GrafikObj.h">
       <Filter>Header Files\Motor\Grafika</Filter>
     </ClInclude>
-    <ClInclude Include="ElemiFizikObj.h">
-      <Filter>Header Files\Motor\Fizika</Filter>
-    </ClInclude>
-    <ClInclude Include="GroupFizikObj.h">
-      <Filter>Header Files\Motor\Fizika</Filter>
-    </ClInclude>
     <ClInclude Include="MozgasAllapot.h">
       <Filter>Header Files\Motor\Fizika</Filter>
     </ClInclude>
@@ -211,6 +214,24 @@
     </ClInclude>
     <ClInclude Include="VezerloObj.h">
       <Filter>Header Files\Motor\Játék\Irányitas</Filter>
+    </ClInclude>
+    <ClInclude Include="ElemiFizikObj.h">
+      <Filter>Header Files\Motor\Fizika\Álapot tárolók</Filter>
+    </ClInclude>
+    <ClInclude Include="FizEngine.h">
+      <Filter>Header Files\Motor\Fizika\Álapot tárolók</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseFizikObj.h">
+      <Filter>Header Files\Motor\Fizika\Álapot tárolók</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupFizikObj.h">
+      <Filter>Header Files\Motor\Fizika\Álapot tárolók</Filter>
+    </ClInclude>
+    <ClInclude Include="ElemiLelek.h">
+      <Filter>Header Files\Motor\Fizika\Lélek</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseObj.h">
+      <Filter>Header Files\Z_Fügetlenek</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

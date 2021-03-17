@@ -2,7 +2,7 @@
 
 FizEngine::FizEngine()
 {
-    entitasok = new list<FizikObj*>();
+    entitasok = new list<BaseFizikObj*>();
 }
 
 FizEngine::~FizEngine()
@@ -11,12 +11,12 @@ FizEngine::~FizEngine()
     delete entitasok;
 }
 
-void FizEngine::addEntitas(FizikObj* _entiti)
+void FizEngine::addEntitas(BaseFizikObj* _entiti)
 {
     entitasok->push_back(_entiti);
 }
 
-bool FizEngine::removEntitas(FizikObj* _entiti)
+bool FizEngine::removEntitas(BaseFizikObj* _entiti)
 {
     entitasok->remove(_entiti);
     return true;

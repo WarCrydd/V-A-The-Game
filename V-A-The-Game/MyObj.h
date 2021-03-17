@@ -3,26 +3,26 @@
 #include <SDL.h>
 #include <iostream>
 
-#include "FizikObj.h"
+#include "BaseFizikObj.h"
 #include "Muveletek.h"
 #include "GrafikObj.h"
+#include "BaseObj.h"
 
 using namespace std;
-class MyObj
+class MyObj : public BaseObj 
 {
 protected:
-    FizikObj* body = nullptr;
+    BaseFizikObj* body = nullptr;
     GrafikObj* megjelenes = nullptr;
 
     bool betoltot = false;
 
 public:
-    MyObj(FizikObj* _body, GrafikObj* _megjelenes);
+    MyObj(BaseFizikObj* _body, GrafikObj* _megjelenes);
     ~MyObj();
 
-    FizikObj* getBody();
+    BaseFizikObj* getBody();
     GrafikObj* getMegjelenes();
 
     virtual void update() = 0;
 };
-
