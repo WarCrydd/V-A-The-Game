@@ -2,7 +2,9 @@
 
 EventEngine::EventEngine()
 {
-
+    SDL_Init(SDL_INIT_EVENTS);
+    SDL_Init(SDL_INIT_EVERYTHING);
+    cout << "eventek inicializalva" << endl;
 }
 
 void EventEngine::start()
@@ -18,7 +20,18 @@ void EventEngine::start()
 
         while (fut)
         {
-            SDL_WaitEvent(&e);
+            if (SDL_PollEvent(&e) != 1)
+            {
+                SDL_WaitEvent(&e);
+            }
+
+            cout << e.type << endl;
+
+            if (e.type == SDL_QUIT)
+            {
+                fut = false;
+            }
+
             for (auto elem : vezerlok)
             {
                 elem->objUpdate(e);

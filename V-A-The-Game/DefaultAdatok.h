@@ -14,7 +14,7 @@ namespace Kijelzo
     static unsigned int magassag = 900;
     static unsigned int max_nagyitas = 1000;
     static unsigned int min_agyitas = 500;
-    static bool fullScreen = true;
+    static bool fullScreen = false;
     static string felirat = "A valami";
 }
 
@@ -60,4 +60,9 @@ namespace Iranyitas
         {SDLK_DOWN, Test::LE},
         {SDLK_SPACE, Test::STOP}
     };
+}
+
+namespace Fizika
+{
+    static unsigned int maxKarakterSebeseg = 10;
 }

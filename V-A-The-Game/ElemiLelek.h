@@ -1,5 +1,7 @@
 #pragma once
 
+#include <SDL.h>
+
 #include "BaseFizikObj.h"
 #include "BaseObj.h"
 
@@ -12,4 +14,5 @@ protected:
 public:
     ElemiLelek(BaseFizikObj* _test);
 
+    virtual void mozgasIgeny(SDL_Point* vector) = 0;
 };

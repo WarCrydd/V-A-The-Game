@@ -30,10 +30,12 @@
     <ClCompile Include="GrafikEngine.cpp" />
     <ClCompile Include="GrafikObj.cpp" />
     <ClCompile Include="GroupFizikObj.cpp" />
+    <ClCompile Include="KeyboardKarakterVezerlo.cpp" />
     <ClCompile Include="LimitLessShip.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MozgasAllapot.cpp" />
     <ClCompile Include="MyObj.cpp" />
+    <ClCompile Include="TestLelek.cpp" />
     <ClCompile Include="VezerloObj.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -51,10 +53,12 @@
     <ClInclude Include="GrafikEngine.h" />
     <ClInclude Include="GrafikObj.h" />
     <ClInclude Include="GroupFizikObj.h" />
+    <ClInclude Include="KeyboardKarakterVezerlo.h" />
     <ClInclude Include="LimitLessShip.h" />
     <ClInclude Include="MozgasAllapot.h" />
     <ClInclude Include="Muveletek.h" />
     <ClInclude Include="MyObj.h" />
+    <ClInclude Include="TestLelek.h" />
     <ClInclude Include="VezerloObj.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

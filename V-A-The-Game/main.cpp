@@ -10,11 +10,14 @@
 #include "GrafikObj.h"
 #include "EgysegNegyzet.h"
 #include "EpitoElem.h"
+#include "EventEngine.h"
 #include "BaseFizikObj.h"
 #include "ElemiFizikObj.h" 
 #include "Muveletek.h"
 #include "FizEngine.h"
 #include "EventEngine.h"
+#include "KeyboardKarakterVezerlo.h"
+#include "TestLelek.h"
 
 #define DRIVER 3
 // a használt driver (-1-nél kisebb értéknél ki irja a lehetõségeket)
@@ -37,16 +40,10 @@ int main(int argc, char* args[])
 	}
 
 	GrafikEngine* g = new GrafikEngine();
-	EventEngine* evEngine = new EventEngine();
 	
 	BaseFizikObj* fobj = new ElemiFizikObj(0, 0, 0, 8000, 8000);
-	BaseFizikObj* fobj2 = new ElemiFizikObj(12000, 12000, 0, 10000, 10000);
 	GrafikObj* gobj = new GrafikObj(fobj);
-	GrafikObj* gobj2 = new GrafikObj(fobj2);
-
 	EgysegNegyzet* probaelem = new EgysegNegyzet(40, 40, fobj, gobj);
-
-	EgysegNegyzet* probaelem2 = new EgysegNegyzet(60, 60, fobj2, gobj2);
 
 	g->setKozepPont(probaelem->getBody()->getMozgasAllapot()->getKozepPont());
 
@@ -63,21 +60,23 @@ int main(int argc, char* args[])
 #pragma endregion
 
 	probaelem->getMegjelenes()->setKinezet(surf);
-	probaelem2->getMegjelenes()->setKinezet(surf);
-
 	g->addObj(probaelem->getMegjelenes());
 	SDL_Delay(10);
-	g->addObj(probaelem2->getMegjelenes());
 
 	cout << g->start(60) << endl;
 	FizEngine* f = new FizEngine();
-	f->addEntitas(fobj2);
+	f->addEntitas(probaelem->getBody());
 	f->start();
 
-	SDL_Delay(4000);
+	TestLelek* lelek = new TestLelek(probaelem->getBody());
+
+	EventEngine* eventEngine = new EventEngine();
+	KeyboardKarakterVezerlo* vezerlo = new KeyboardKarakterVezerlo(lelek, Iranyitas::tesztMozgas);
 	
-	SDL_Point* pp = probaelem2->getBody()->getMozgasAllapot()->getSebesseg();
-	pp->x = 10;
+	eventEngine->addVezerlo(vezerlo);
+	eventEngine->start();
+
+	SDL_Delay(4000);
 
 	SDL_Delay(4000);
 
@@ -85,6 +84,7 @@ int main(int argc, char* args[])
 
 	g->stop();
 	f->stop();
+	eventEngine->stop();
 
 	delete g;
 

@@ -174,6 +174,12 @@
     <ClCompile Include="ElemiLelek.cpp">
       <Filter>Source Files\Motor\Fizika\Lélek</Filter>
     </ClCompile>
+    <ClCompile Include="KeyboardKarakterVezerlo.cpp">
+      <Filter>Source Files\Motor\Játék\Irányitás</Filter>
+    </ClCompile>
+    <ClCompile Include="TestLelek.cpp">
+      <Filter>Source Files\Motor\Fizika\Lélek</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyObj.h">
@@ -232,6 +238,12 @@
     </ClInclude>
     <ClInclude Include="BaseObj.h">
       <Filter>Header Files\Z_Fügetlenek</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardKarakterVezerlo.h">
+      <Filter>Header Files\Motor\Játék\Irányitas</Filter>
+    </ClInclude>
+    <ClInclude Include="TestLelek.h">
+      <Filter>Header Files\Motor\Fizika\Lélek</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
