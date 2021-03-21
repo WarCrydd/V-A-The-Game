@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+
 #include "VezerloObj.h"
 #include "DefaultAdatok.h"
 #include "ElemiFizikObj.h"

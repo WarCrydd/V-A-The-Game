@@ -9,6 +9,8 @@ void KeyboardKarakterVezerlo::objUpdate(SDL_Event& e)
 {
 	int x = 0, y = 0;
 
+	cout << "keyboard";
+
 	if (e.type == SDL_KEYDOWN)
 	{
 		switch (valtoTabla.at(SDL_KeyCode(e.key.keysym.sym)))
@@ -63,6 +65,8 @@ void KeyboardKarakterVezerlo::objUpdate(SDL_Event& e)
 	p.y = y;
 
 	lelek->mozgasIgeny(&p);
+
+	cout << " vege!" << endl;
 
 	return;
 }

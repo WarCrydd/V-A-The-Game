@@ -16,6 +16,7 @@ namespace Kijelzo
     static unsigned int min_agyitas = 500;
     static bool fullScreen = false;
     static string felirat = "A valami";
+    static unsigned int alapMaxFPS = 60;
 }
 
 namespace Render

@@ -59,3 +59,19 @@ namespace Eltolasok
         }
     };
 }
+
+namespace TestObjKeszito
+{
+    auto surfaceKeszito = [](int w, int h, int r, int g, int b, int x = 0, int y = 0)
+    {
+        SDL_Surface* surf = SDL_CreateRGBSurface(0, w, h, 32, 0, 0, 0, 0);
+        SDL_Rect rect;
+        rect.x = x;
+        rect.y = y; 
+        rect.w = w;
+        rect.h = h;
+        SDL_FillRect(surf, &rect, SDL_MapRGBA(surf->format, r, g, b, 0));
+
+        return surf;
+    };
+}
