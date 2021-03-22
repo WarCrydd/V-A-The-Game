@@ -1,5 +1,6 @@
 #pragma once
 #include <SDL.h>
+#include <iostream>
 
 #include "BaseFizikObj.h"
 #include "MozgasAllapot.h"
@@ -14,9 +15,8 @@ protected:
     SDL_Rect* keret = nullptr;
     SDL_Rect* testKeret = nullptr;
 
-    SDL_Point* kP = nullptr;
-    SDL_Point* kozepPont = nullptr;
     SDL_Point* testKozepPont = nullptr;
+    SDL_Point* kozepPont = nullptr;
 
     int* forgatas = nullptr;
 

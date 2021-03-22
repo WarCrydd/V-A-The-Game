@@ -212,16 +212,10 @@
     <ClInclude Include="GrafikObj.h">
       <Filter>Header Files\Motor\Grafika</Filter>
     </ClInclude>
-    <ClInclude Include="MozgasAllapot.h">
-      <Filter>Header Files\Motor\Fizika</Filter>
-    </ClInclude>
     <ClInclude Include="VezerloObj.h">
       <Filter>Header Files\Motor\Játék\Irányitas</Filter>
     </ClInclude>
     <ClInclude Include="ElemiFizikObj.h">
-      <Filter>Header Files\Motor\Fizika\Álapot tárolók</Filter>
-    </ClInclude>
-    <ClInclude Include="FizEngine.h">
       <Filter>Header Files\Motor\Fizika\Álapot tárolók</Filter>
     </ClInclude>
     <ClInclude Include="BaseFizikObj.h">
@@ -244,6 +238,15 @@
     </ClInclude>
     <ClInclude Include="MainEngine.h">
       <Filter>Header Files\Motor\Játék</Filter>
+    </ClInclude>
+    <ClInclude Include="MozgasAllapot.h">
+      <Filter>Header Files\Motor\Fizika\Álapot tárolók</Filter>
+    </ClInclude>
+    <ClInclude Include="FizEngine.h">
+      <Filter>Header Files\Motor\Fizika</Filter>
+    </ClInclude>
+    <ClInclude Include="FileMuveletek.h">
+      <Filter>Header Files\Z_Fügetlenek</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

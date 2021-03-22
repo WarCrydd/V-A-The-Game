@@ -29,6 +29,7 @@ GrafikEngine::GrafikEngine()
         Kijelzo::szelesseg, 
         Kijelzo::magassag, 
         Kijelzo::fullScreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0);
+
     if (Kijelzo::fullScreen)
     {
         SDL_GetWindowSize(main_window, &ablakSzelesseg, &ablakMagassag);

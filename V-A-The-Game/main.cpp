@@ -41,20 +41,31 @@ int main(int argc, char* args[])
 	}
 #pragma endregion
 	
-	BaseFizikObj* fobj = new ElemiFizikObj(0, 0, 0, 8000, 8000);
+	SDL_Surface* surf = TestObjKeszito::surfaceKeszito(50, 50, 255, 255, 0);
+	SDL_Surface* surf2 = TestObjKeszito::surfaceKeszito(50, 50, 0, 127, 255);
+
+	BaseFizikObj* fobj = new ElemiFizikObj(0, 0, 0, 80000, 80000);
 	GrafikObj* gobj = new GrafikObj(fobj);
 	EgysegNegyzet* probaelem = new EgysegNegyzet(fobj, gobj);
-
-	SDL_Surface* surf = TestObjKeszito::surfaceKeszito(50, 50, 255, 255, 0);
-
 	probaelem->getMegjelenes()->setKinezet(surf);
 
+	BaseFizikObj* fobj2 = new ElemiFizikObj(80000, 80000, 45, 80000, 80000);
+	GrafikObj* gobj2 = new GrafikObj(fobj2);
+	EgysegNegyzet* probaelem2 = new EgysegNegyzet(fobj2, gobj2);
+	probaelem2->getMegjelenes()->setKinezet(surf2);
+
 	MainEngine* jatek = new MainEngine();
-	jatek->setKameraKozepPont(probaelem->getBody()->getMozgasAllapot()->getKozepPont());
-	jatek->addTestElem(probaelem);
+	SDL_Point* p = new SDL_Point();
+	p->x = 0;
+	p->y = 0;
+
+	jatek->setKameraKozepPont(p);
+	//jatek->setKameraKozepPont(probaelem->getBody()->getMozgasAllapot()->getKozepPont());
+	jatek->addTestElem(probaelem2);
+	jatek->addVezereltTestElem(probaelem);
 	jatek->start();
 
-	cout << "A futás sikeres volt" << endl;
+	cout << "A futas sikeres volt" << endl;
 
 	return 0;
 }

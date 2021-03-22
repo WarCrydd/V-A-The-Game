@@ -2,8 +2,10 @@
 
 MainEngine::MainEngine()
 {
+    SDL_Init(SDL_INIT_AUDIO);
+    SDL_Init(SDL_INIT_EVENTS);
     gEngine = new GrafikEngine();
-    fEngine = new FizEngine(); 
+    fEngine = new FizEngine();
 }
 
 MainEngine::~MainEngine()
@@ -38,6 +40,11 @@ int MainEngine::start()
         {
             fut = false;
         }
+
+        for (auto elem : vezerlok)
+        {
+            elem->objUpdate(e);
+        }
     }
 
     fEngine->stop();
@@ -49,4 +56,13 @@ int MainEngine::start()
 void MainEngine::setKameraKozepPont(SDL_Point* _p)
 {
     gEngine->setKozepPont(_p);
+}
+
+void MainEngine::addVezereltTestElem(MyObj* _obj)
+{
+    TestLelek* t = new TestLelek(_obj->getBody());
+    KeyboardKarakterVezerlo* vezerlo = new KeyboardKarakterVezerlo(t, Iranyitas::tesztMozgas);
+    vezerlok.push_back(vezerlo);
+
+    addTestElem(_obj);
 }

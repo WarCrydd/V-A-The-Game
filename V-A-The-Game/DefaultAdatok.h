@@ -10,13 +10,13 @@ using namespace std;
 
 namespace Kijelzo
 {
-    static unsigned int szelesseg = 900;
+    static unsigned int szelesseg = 1200;
     static unsigned int magassag = 900;
     static unsigned int max_nagyitas = 1000;
     static unsigned int min_agyitas = 500;
     static bool fullScreen = false;
     static string felirat = "A valami";
-    static unsigned int alapMaxFPS = 60;
+    static unsigned int alapMaxFPS = 100;
 }
 
 namespace Render
@@ -56,14 +56,18 @@ namespace Iranyitas
     static map<SDL_KeyCode, Test> tesztMozgas
     {
         {SDLK_UP, Test::FEL},
+        {SDLK_w, Test::FEL},
         {SDLK_RIGHT, Test::JOBRA},
+        {SDLK_d, Test::JOBRA},
         {SDLK_LEFT, Test::BALRA},
+        {SDLK_a, Test::BALRA},
         {SDLK_DOWN, Test::LE},
+        {SDLK_s, Test::LE},
         {SDLK_SPACE, Test::STOP}
     };
 }
 
 namespace Fizika
 {
-    static unsigned int maxKarakterSebeseg = 10;
+    static unsigned int maxKarakterSebeseg = 50;
 }

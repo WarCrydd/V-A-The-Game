@@ -11,24 +11,29 @@ void KeyboardKarakterVezerlo::objUpdate(SDL_Event& e)
 
 	cout << "keyboard";
 
+	if (valtoTabla.find(SDL_KeyCode(e.key.keysym.sym)) == valtoTabla.end() || e.key.repeat != 0)
+	{
+		return;
+	}
+
 	if (e.type == SDL_KEYDOWN)
 	{
-		switch (valtoTabla.at(SDL_KeyCode(e.key.keysym.sym)))
+		switch (valtoTabla.find(SDL_KeyCode(e.key.keysym.sym))->second)
 		{
 		case Iranyitas::Test::FEL:
-			x = -1 * Fizika::maxKarakterSebeseg;
+			y += -1 * Fizika::maxKarakterSebeseg;
 			break;
 
 		case Iranyitas::Test::LE:
-			x = 1 * Fizika::maxKarakterSebeseg;
+			y += 1 * Fizika::maxKarakterSebeseg;
 			break;
 
 		case Iranyitas::Test::BALRA:
-			y = -1 * Fizika::maxKarakterSebeseg;
+			x += -1 * Fizika::maxKarakterSebeseg;
 			break;
 
 		case Iranyitas::Test::JOBRA:
-			y = 1 * Fizika::maxKarakterSebeseg;
+			x += 1 * Fizika::maxKarakterSebeseg;
 			break;
 
 		default:
@@ -37,22 +42,22 @@ void KeyboardKarakterVezerlo::objUpdate(SDL_Event& e)
 	}
 	else if (e.type == SDL_KEYUP)
 	{
-		switch (valtoTabla.at(SDL_KeyCode(e.key.keysym.sym)))
+		switch (valtoTabla.find(SDL_KeyCode(e.key.keysym.sym))->second)
 		{
 		case Iranyitas::Test::FEL:
-			x = 0;
+			y += 1 * Fizika::maxKarakterSebeseg;;
 			break;
 
 		case Iranyitas::Test::LE:
-			x = 0;
+			y -= 1 * Fizika::maxKarakterSebeseg;;
 			break;
 
 		case Iranyitas::Test::BALRA:
-			y = 0;
+			x += 1 * Fizika::maxKarakterSebeseg;;
 			break;
 
 		case Iranyitas::Test::JOBRA:
-			y = 0;
+			x -= 1 * Fizika::maxKarakterSebeseg;;
 			break;
 
 		default:

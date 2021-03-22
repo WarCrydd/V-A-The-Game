@@ -47,6 +47,7 @@
     <ClInclude Include="Enumok.h" />
     <ClInclude Include="EpitettObj.h" />
     <ClInclude Include="EpitoElem.h" />
+    <ClInclude Include="FileMuveletek.h" />
     <ClInclude Include="FizEngine.h" />
     <ClInclude Include="BaseFizikObj.h" />
     <ClInclude Include="GrafikEngine.h" />
