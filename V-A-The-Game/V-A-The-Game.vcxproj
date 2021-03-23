@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ControlerKarakterVezerlo.cpp" />
     <ClCompile Include="EgysegNegyzet.cpp" />
     <ClCompile Include="ElemiFizikObj.cpp" />
     <ClCompile Include="ElemiLelek.cpp" />
@@ -40,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseObj.h" />
+    <ClInclude Include="ControlerKarakterVezerlo.h" />
     <ClInclude Include="DefaultAdatok.h" />
     <ClInclude Include="EgysegNegyzet.h" />
     <ClInclude Include="ElemiFizikObj.h" />

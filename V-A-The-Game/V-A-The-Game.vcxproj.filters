@@ -180,6 +180,9 @@
     <ClCompile Include="MainEngine.cpp">
       <Filter>Source Files\Motor\Játék</Filter>
     </ClCompile>
+    <ClCompile Include="ControlerKarakterVezerlo.cpp">
+      <Filter>Source Files\Motor\Játék\Irányitás</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyObj.h">
@@ -247,6 +250,9 @@
     </ClInclude>
     <ClInclude Include="FileMuveletek.h">
       <Filter>Header Files\Z_Fügetlenek</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlerKarakterVezerlo.h">
+      <Filter>Header Files\Motor\Játék\Irányitas</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

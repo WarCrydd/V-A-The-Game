@@ -7,6 +7,7 @@
 #include "FizEngine.h"
 #include "KeyboardKarakterVezerlo.h"
 #include "TestLelek.h"
+#include "ControlerKarakterVezerlo.h"
 
 using namespace std;
 class MainEngine
@@ -25,7 +26,7 @@ public:
 
     void addTestElem(MyObj* _obj);
     void setKameraKozepPont(SDL_Point* _p);
-    void addVezereltTestElem(MyObj* _obj);
+    void addVezereltTestElem(MyObj* _obj, MyObj* _obj2);
 
     int start();
 };

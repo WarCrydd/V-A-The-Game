@@ -60,9 +60,9 @@ int main(int argc, char* args[])
 	p->y = 0;
 
 	jatek->setKameraKozepPont(p);
-	//jatek->setKameraKozepPont(probaelem->getBody()->getMozgasAllapot()->getKozepPont());
+	jatek->setKameraKozepPont(probaelem->getBody()->getMozgasAllapot()->getKozepPont());
 	jatek->addTestElem(probaelem2);
-	jatek->addVezereltTestElem(probaelem);
+	jatek->addVezereltTestElem(probaelem, probaelem2);
 	jatek->start();
 
 	cout << "A futas sikeres volt" << endl;

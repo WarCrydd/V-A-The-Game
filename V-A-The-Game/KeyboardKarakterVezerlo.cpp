@@ -9,8 +9,6 @@ void KeyboardKarakterVezerlo::objUpdate(SDL_Event& e)
 {
 	int x = 0, y = 0;
 
-	cout << "keyboard";
-
 	if (valtoTabla.find(SDL_KeyCode(e.key.keysym.sym)) == valtoTabla.end() || e.key.repeat != 0)
 	{
 		return;
@@ -71,7 +69,7 @@ void KeyboardKarakterVezerlo::objUpdate(SDL_Event& e)
 
 	lelek->mozgasIgeny(&p);
 
-	cout << " vege!" << endl;
+	cout << "keyboard event" << endl;
 
 	return;
 }

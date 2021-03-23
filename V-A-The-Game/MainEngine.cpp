@@ -58,11 +58,14 @@ void MainEngine::setKameraKozepPont(SDL_Point* _p)
     gEngine->setKozepPont(_p);
 }
 
-void MainEngine::addVezereltTestElem(MyObj* _obj)
+void MainEngine::addVezereltTestElem(MyObj* _obj, MyObj* _obj2)
 {
     TestLelek* t = new TestLelek(_obj->getBody());
-    KeyboardKarakterVezerlo* vezerlo = new KeyboardKarakterVezerlo(t, Iranyitas::tesztMozgas);
+    TestLelek* t2 = new TestLelek(_obj2->getBody());
+    ControlerKarakterVezerlo* vezerlo1 = new ControlerKarakterVezerlo(t);
+    KeyboardKarakterVezerlo* vezerlo = new KeyboardKarakterVezerlo(t2, Iranyitas::tesztMozgas);
     vezerlok.push_back(vezerlo);
+    vezerlok.push_back(vezerlo1);
 
     addTestElem(_obj);
 }
