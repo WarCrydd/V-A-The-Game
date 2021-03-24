@@ -14,7 +14,7 @@ namespace Kijelzo
     static unsigned int magassag = 900;
     static unsigned int max_nagyitas = 1000;
     static unsigned int min_nagyitas = 1000;
-    static bool fullScreen = true;
+    static bool fullScreen = false;
     static string felirat = "A valami";
     static unsigned int alapMaxFPS = 100;
 }
