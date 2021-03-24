@@ -10,8 +10,8 @@ using namespace std;
 
 namespace Kijelzo
 {
-    static unsigned int szelesseg = 1200;
-    static unsigned int magassag = 900;
+    static unsigned int szelesseg = 900;
+    static unsigned int magassag = 600;
     static unsigned int max_nagyitas = 1000;
     static unsigned int min_nagyitas = 1000;
     static bool fullScreen = false;
