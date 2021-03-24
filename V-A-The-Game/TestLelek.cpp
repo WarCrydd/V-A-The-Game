@@ -4,10 +4,9 @@ TestLelek::TestLelek(BaseFizikObj* _b) : ElemiLelek(_b)
 {
 }
 
-void TestLelek::mozgasIgeny(SDL_Point* vector)
+void TestLelek::mozgasIgeny(MyPoint* vector)
 {
-    SDL_Point* gyorsulas = test->getMozgasAllapot()->getSebesseg();
+    MyPoint* gyorsulas = test->getMozgasAllapot()->getSebesseg();
 
-    gyorsulas->x += vector->x;
-    gyorsulas->y += vector->y;
+    *gyorsulas += *vector;
 }

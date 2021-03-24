@@ -2,20 +2,24 @@
 #include <SDL.h>
 
 #include "BaseObj.h"
+#include "Strukturak.h"
 
+using namespace std;
 class MozgasAllapot : public BaseObj
 {
 protected:
-    SDL_Point* kozepPont = nullptr;
-    SDL_Point* sebeseg = nullptr;
+    MyPoint* kozepPont = nullptr;
+    MyPoint* sebeseg = nullptr;
     int* forgas = nullptr;
+    int* tomeg = nullptr;
+    //g-ban
 
 public:
-    MozgasAllapot(int x, int y, int r, SDL_Point* _mozgas);
+    MozgasAllapot(int x, int y, int r, MyPoint* _mozgas);
 
-    SDL_Point* getKozepPont();
+    MyPoint* getKozepPont();
 
-    SDL_Point* getSebesseg();
+    MyPoint* getSebesseg();
 
     int* getForgas();
     

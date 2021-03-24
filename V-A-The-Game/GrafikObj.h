@@ -16,7 +16,7 @@ protected:
     SDL_Rect* testKeret = nullptr;
 
     SDL_Point* testKozepPont = nullptr;
-    SDL_Point* kozepPont = nullptr;
+    MyPoint* kozepPont = nullptr;
 
     int* forgatas = nullptr;
 
@@ -34,8 +34,8 @@ public:
     SDL_Texture* getTexture();
 
     SDL_Rect* getKeret();
-    SDL_Rect* getKeret(SDL_Point* pont, int hosz, int magassag, int arany);
-    SDL_Point* getKozepPont();
+    SDL_Rect* getKeret(MyPoint* pont, int hosz, int magassag, int arany);
+    MyPoint* getKozepPont();
     SDL_Point* getForgatasiKozepPont();
     int* getForgatas();
 };

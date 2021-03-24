@@ -44,6 +44,7 @@ void FizEngine::start()
             if (diff.count() < 2)
             {
                 SDL_Delay(2 - diff.count());
+                cout << diff.count() << endl;
             }
         }
     };

@@ -70,10 +70,11 @@ SDL_Rect* GrafikObj::getKeret()
     return testKeret;
 }
 
-SDL_Rect* GrafikObj::getKeret(SDL_Point* pont, int hosz, int magassag, int arany)
+SDL_Rect* GrafikObj::getKeret(MyPoint* pont, int hosz, int magassag, int arany)
 {
     pontokFrisit(arany);
     testKeret->x = ((kozepPont->x - pont->x) / arany) - (testKeret->w / 2) + hosz;
+
     //cout << "az x koordinata: "
     //    << kozepPont->x << "; "
     //    << pont->x << "; "
@@ -81,7 +82,9 @@ SDL_Rect* GrafikObj::getKeret(SDL_Point* pont, int hosz, int magassag, int arany
     //    << testKeret->w << "; "
     //    << hosz << "; "
     //    << testKeret->x << endl;
+
     testKeret->y = ((kozepPont->y - pont->y) / arany) - (testKeret->h / 2) + magassag;
+
     //cout << "az y koordinata: "
     //    << kozepPont->y << "; "
     //    << pont->y << "; "
@@ -89,10 +92,11 @@ SDL_Rect* GrafikObj::getKeret(SDL_Point* pont, int hosz, int magassag, int arany
     //    << testKeret->h << "; "
     //    << magassag << "; "
     //    << testKeret->y << endl;
+
     return testKeret;
 }
 
-SDL_Point* GrafikObj::getKozepPont()
+MyPoint* GrafikObj::getKozepPont()
 {
     return kozepPont;
 }

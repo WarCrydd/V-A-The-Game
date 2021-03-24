@@ -55,9 +55,7 @@ int main(int argc, char* args[])
 	probaelem2->getMegjelenes()->setKinezet(surf2);
 
 	MainEngine* jatek = new MainEngine();
-	SDL_Point* p = new SDL_Point();
-	p->x = 0;
-	p->y = 0;
+	MyPoint* p = new MyPoint();
 
 	jatek->setKameraKozepPont(p);
 	jatek->setKameraKozepPont(probaelem->getBody()->getMozgasAllapot()->getKozepPont());

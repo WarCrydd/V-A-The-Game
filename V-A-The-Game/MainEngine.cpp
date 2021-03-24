@@ -53,7 +53,7 @@ int MainEngine::start()
     return 0;
 }
 
-void MainEngine::setKameraKozepPont(SDL_Point* _p)
+void MainEngine::setKameraKozepPont(MyPoint* _p)
 {
     gEngine->setKozepPont(_p);
 }

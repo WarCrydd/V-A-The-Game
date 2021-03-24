@@ -10,6 +10,6 @@ protected:
 public:
     TestLelek(BaseFizikObj* _b);
 
-    virtual void mozgasIgeny(SDL_Point* vector) override;
+    virtual void mozgasIgeny(MyPoint* vector) override;
 };
 

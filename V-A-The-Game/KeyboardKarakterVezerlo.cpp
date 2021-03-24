@@ -63,9 +63,7 @@ void KeyboardKarakterVezerlo::objUpdate(SDL_Event& e)
 		}
 	}
 
-	SDL_Point p;
-	p.x = x;
-	p.y = y;
+	MyPoint p(x, y);
 
 	lelek->mozgasIgeny(&p);
 

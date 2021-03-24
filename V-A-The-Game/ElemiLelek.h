@@ -14,5 +14,5 @@ protected:
 public:
     ElemiLelek(BaseFizikObj* _test);
 
-    virtual void mozgasIgeny(SDL_Point* vector) = 0;
+    virtual void mozgasIgeny(MyPoint* vector) = 0;
 };

@@ -11,7 +11,7 @@ class ControlerKarakterVezerlo : public VezerloObj
 {
 protected:
     SDL_Joystick* game;
-    SDL_Point* mozgatas;
+    MyPoint* mozgatas;
 
 public:
     ControlerKarakterVezerlo(ElemiLelek* _f);

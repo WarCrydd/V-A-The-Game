@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <thread>
 #include <chrono>
+#include <iostream>
 
 #include "BaseFizikObj.h"
 

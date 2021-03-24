@@ -21,7 +21,7 @@ void GrafikEngine::frame()
 
 GrafikEngine::GrafikEngine()
 {
-    kozepPont = new SDL_Point();
+    kozepPont = new MyPoint();
     main_window = SDL_CreateWindow(
         Kijelzo::felirat.c_str(), 
         SDL_WINDOWPOS_UNDEFINED, 
@@ -109,12 +109,12 @@ SDL_Renderer* GrafikEngine::getRenderer()
     return main_renderer;
 }
 
-SDL_Point* GrafikEngine::getKozepPont()
+MyPoint* GrafikEngine::getKozepPont()
 {
     return kozepPont;
 }
 
-void GrafikEngine::setKozepPont(SDL_Point* _pont)
+void GrafikEngine::setKozepPont(MyPoint* _pont)
 {
     if (kozepPont != nullptr)
     {

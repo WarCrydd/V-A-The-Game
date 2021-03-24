@@ -254,5 +254,13 @@
     <ClInclude Include="ControlerKarakterVezerlo.h">
       <Filter>Header Files\Motor\Játék\Irányitas</Filter>
     </ClInclude>
+    <ClInclude Include="Strukturak.h">
+      <Filter>Header Files\Z_Fügetlenek</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="V-A.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

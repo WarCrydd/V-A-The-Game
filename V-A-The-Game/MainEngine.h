@@ -25,7 +25,7 @@ public:
     ~MainEngine();
 
     void addTestElem(MyObj* _obj);
-    void setKameraKozepPont(SDL_Point* _p);
+    void setKameraKozepPont(MyPoint* _p);
     void addVezereltTestElem(MyObj* _obj, MyObj* _obj2);
 
     int start();

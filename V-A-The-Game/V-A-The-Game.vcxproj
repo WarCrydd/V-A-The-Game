@@ -61,8 +61,12 @@
     <ClInclude Include="MozgasAllapot.h" />
     <ClInclude Include="Muveletek.h" />
     <ClInclude Include="MyObj.h" />
+    <ClInclude Include="Strukturak.h" />
     <ClInclude Include="TestLelek.h" />
     <ClInclude Include="VezerloObj.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="V-A.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -128,6 +132,7 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>C:\Program Files\SDL\SDL2_ttf-2.0.15\include;C:\Program Files\SDL\SDL2_image-2.0.5\include;C:\Program Files\SDL\SDL2-2.0.14\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files\SDL\SDL2_ttf-2.0.15\lib\x64;C:\Program Files\SDL\SDL2_image-2.0.5\lib\x64;C:\Program Files\SDL\SDL2-2.0.14\lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>C:\Users\varga\Desktop\jatek\Build</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>

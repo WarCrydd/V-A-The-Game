@@ -14,7 +14,7 @@ class GrafikEngine
 private:
     SDL_Window* main_window;
     SDL_Renderer* main_renderer;
-    SDL_Point* kozepPont;
+    MyPoint* kozepPont;
 
     list<GrafikObj*>* ter = new list<GrafikObj*>();
     thread* foSzal = nullptr;
@@ -36,8 +36,8 @@ public:
 
     list<GrafikObj*>* getTer();
     SDL_Renderer* getRenderer();
-    SDL_Point* getKozepPont();
-    void setKozepPont(SDL_Point* _pont);
+    MyPoint* getKozepPont();
+    void setKozepPont(MyPoint* _pont);
 
     void addObj(GrafikObj* obj);
     void removeObj(GrafikObj* obj);

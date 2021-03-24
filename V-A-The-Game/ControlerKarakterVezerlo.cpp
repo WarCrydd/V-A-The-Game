@@ -4,9 +4,7 @@ ControlerKarakterVezerlo::ControlerKarakterVezerlo(ElemiLelek* _f) : VezerloObj(
 {
     SDL_Init(SDL_INIT_GAMECONTROLLER);
     SDL_Init(SDL_INIT_JOYSTICK);
-    mozgatas = new SDL_Point();
-    mozgatas->x = 0;
-    mozgatas->y = 0;
+    mozgatas = new MyPoint();
 
     if (SDL_NumJoysticks() < 1)
     {
