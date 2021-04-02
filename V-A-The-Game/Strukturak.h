@@ -36,6 +36,12 @@ struct MyPoint
         return MyPoint(x - pont.x, y - pont.y);
     }
 
+    void operator -=(const MyPoint& pont)
+    {
+        x -= pont.x;
+        y -= pont.y;
+    }
+
     int operator >>(const MyPoint& pont) const 
     {
         int result = pow(x - pont.x, 2) + pow(y - pont.y, 2);
@@ -60,4 +66,9 @@ struct MyPoint
     {
         return MyPoint(x * szorzo, y * szorzo);
     }
+};
+
+struct MyKeret
+{
+
 };

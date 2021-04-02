@@ -23,11 +23,6 @@ void ControlerKarakterVezerlo::objUpdate(SDL_Event& e)
 
     cout << e.jaxis.which << "; " << (int)e.jaxis.axis << "; " << e.jaxis.value << endl;
 
-    if (e.jaxis.axis >= 2)
-    {
-        return;
-    }
-
     if (e.jaxis.axis == 0)
     {
         mozgatas->x = e.jaxis.value / JoystickAdatok::osztas;
@@ -38,4 +33,45 @@ void ControlerKarakterVezerlo::objUpdate(SDL_Event& e)
     }
     
     lelek->mozgasIgeny(mozgatas);
+
+    cout << "Engedely: " << nagytasEngedely << endl;
+
+    if (nagytasEngedely)
+    {
+        if (e.jaxis.axis == 4)
+        {
+            if (axis4Aktív)
+            {
+                if (e.jaxis.value < 16000 && e.jaxis.value > -16000)
+                {
+                    axis4Aktív = false;
+                    cout << "kozepen" << endl;
+                }
+            }
+            else
+            {
+                using namespace Kijelzo;
+                if (e.jaxis.value > 16000)
+                {
+                    *nagyitas += (max_nagyitas - min_nagyitas) / 20;
+                    if (*nagyitas > max_nagyitas) *nagyitas = max_nagyitas;
+                    cout << "fent" << endl;
+                    axis4Aktív = true;
+                }
+                else if (e.jaxis.value < -16000)
+                {
+                    *nagyitas -= (max_nagyitas - min_nagyitas) / 20;
+                    if (*nagyitas < min_nagyitas) *nagyitas = min_nagyitas;
+                    cout << "lent" << endl;
+                    axis4Aktív = true;
+                }
+            }
+        }
+    }
+}
+
+void ControlerKarakterVezerlo::setNagyitasValtas(int* _nagyitas)
+{
+    nagyitas = _nagyitas;
+    nagytasEngedely = true;
 }

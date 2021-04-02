@@ -12,6 +12,9 @@ using namespace std;
 class GrafikEngine
 {
 private:
+    int megjelenitendoVonalak = 3;
+    int vonalakTavolsaga;
+
     SDL_Window* main_window;
     SDL_Renderer* main_renderer;
     MyPoint* kozepPont;
@@ -34,6 +37,8 @@ public:
     bool start(int fps);
     void stop();
 
+
+    int* getNagyitas();
     list<GrafikObj*>* getTer();
     SDL_Renderer* getRenderer();
     MyPoint* getKozepPont();

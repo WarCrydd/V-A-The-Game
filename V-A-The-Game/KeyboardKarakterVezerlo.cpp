@@ -67,7 +67,7 @@ void KeyboardKarakterVezerlo::objUpdate(SDL_Event& e)
 
 	lelek->mozgasIgeny(&p);
 
-	cout << "keyboard event" << endl;
+	//cout << "keyboard event" << endl;
 
 	return;
 }

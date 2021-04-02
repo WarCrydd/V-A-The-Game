@@ -36,7 +36,7 @@ int MainEngine::start()
             SDL_WaitEvent(&e);
         }
 
-        if (e.type == SDL_QUIT)
+        if (e.type == SDL_QUIT || (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_ESCAPE))
         {
             fut = false;
         }
@@ -66,6 +66,8 @@ void MainEngine::addVezereltTestElem(MyObj* _obj, MyObj* _obj2)
     KeyboardKarakterVezerlo* vezerlo = new KeyboardKarakterVezerlo(t2, Iranyitas::tesztMozgas);
     vezerlok.push_back(vezerlo);
     vezerlok.push_back(vezerlo1);
+
+    vezerlo1->setNagyitasValtas(gEngine->getNagyitas());
 
     addTestElem(_obj);
 }

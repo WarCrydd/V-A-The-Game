@@ -58,7 +58,7 @@ int main(int argc, char* args[])
 	MyPoint* p = new MyPoint();
 
 	jatek->setKameraKozepPont(p);
-	jatek->setKameraKozepPont(probaelem->getBody()->getMozgasAllapot()->getKozepPont());
+	jatek->setKameraKozepPont(probaelem2->getBody()->getMozgasAllapot()->getKozepPont());
 	jatek->addTestElem(probaelem2);
 	jatek->addVezereltTestElem(probaelem, probaelem2);
 	jatek->start();

@@ -4,6 +4,25 @@ void GrafikEngine::frame()
 {
     SDL_SetRenderDrawColor(main_renderer, 100, 100, 100, 0);
     SDL_RenderClear(main_renderer);
+
+#pragma region Vonalazas
+    int vonalPTavolsag = vonalakTavolsaga / nagyitas;
+    int xKezdet = ((kozepPont->x % vonalakTavolsaga) / nagyitas);
+    int yKezdet = ((kozepPont->y % vonalakTavolsaga) / nagyitas);
+    
+    SDL_SetRenderDrawColor(main_renderer, 255, 255, 255, 0);
+    for (xKezdet *= -1; xKezdet < ablakSzelesseg; xKezdet += vonalPTavolsag)
+    {
+        SDL_RenderDrawLine(main_renderer, xKezdet, 0, xKezdet, ablakMagassag);
+    }// X tengely
+
+    for (yKezdet *= -1; yKezdet < ablakMagassag; yKezdet += vonalPTavolsag)
+    {
+        SDL_RenderDrawLine(main_renderer, 0, yKezdet, ablakSzelesseg, yKezdet);
+    }// Y tengely
+
+#pragma endregion
+
     for (auto elem : *ter)
     {
         elem->pontokFrisit(nagyitas);
@@ -39,6 +58,8 @@ GrafikEngine::GrafikEngine()
         ablakMagassag = Kijelzo::magassag;
         ablakSzelesseg = Kijelzo::szelesseg;
     }
+
+    vonalakTavolsaga = ablakSzelesseg * Kijelzo::min_nagyitas / megjelenitendoVonalak;
 
     main_renderer = SDL_CreateRenderer(main_window, Render::hasznaltDriver, SDL_RENDERER_ACCELERATED);
 }
@@ -97,6 +118,11 @@ void GrafikEngine::stop()
     foSzal->join();
     delete foSzal;
     foSzal = nullptr;
+}
+
+int* GrafikEngine::getNagyitas()
+{
+    return &nagyitas;
 }
 
 list<GrafikObj*>* GrafikEngine::getTer()
