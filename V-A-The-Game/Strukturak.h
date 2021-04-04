@@ -42,7 +42,7 @@ struct MyPoint
         y -= pont.y;
     }
 
-    int operator >>(const MyPoint& pont) const 
+    int operator >>(const MyPoint& pont) const //Távolság
     {
         int result = pow(x - pont.x, 2) + pow(y - pont.y, 2);
         return sqrt(result);
@@ -68,7 +68,129 @@ struct MyPoint
     }
 };
 
+struct MyLine
+{
+    MyPoint* a;
+    MyPoint* b;
+
+    MyLine(MyPoint* _a, MyPoint* _b)
+    {
+        a = _a;
+        b = _b;
+    }
+
+    MyLine()
+    {
+        a = new MyPoint();
+        b = new MyPoint();
+    }
+
+    ~MyLine()
+    {
+        delete a;
+        delete b;
+    }
+
+    pair<bool, MyPoint> operator |(const MyLine& _vonal)
+    {
+        pair<bool, MyPoint> result;
+
+        double a1 = b->y - a->y;
+        double b1 = a->x - b->x;
+        double c1 = a1 * (a->x) + b1 * (a->y);
+
+        // Line CD represented as a2x + b2y = c2 
+        double a2 = _vonal.b->y - _vonal.a->y;
+        double b2 = _vonal.a->x - _vonal.b->x;
+        double c2 = a2 * (_vonal.a->x) + b2 * (_vonal.a->y);
+
+        double d = a1 * b2 - a2 * b1;
+        if (d == 0)
+        {
+            result.first = false;
+            return result;
+        }
+        else
+        {
+            result.first = true;
+            int x = (b2 * c1 - b1 * c2) / d;
+            int y = (a1 * c2 - a2 * c1) / d;
+
+            result.second.x = x;
+            result.second.y = y;
+            return result;
+        }
+    }
+};
+
 struct MyKeret
 {
+    Uint16 oldalak;
+    MyPoint* sarkok;
+    MyPoint* kozepPont;
 
+    MyKeret(Uint16 _oldalak, MyPoint* _pont)
+    {
+        oldalak = _oldalak;
+        kozepPont = _pont;
+
+        sarkok = new MyPoint[_oldalak];
+    }
+
+    ~MyKeret()
+    {
+        delete[oldalak] sarkok;
+    }
+
+    MyPoint sulyPontRelativ() const
+    {
+        MyPoint p;
+
+        for (int i = 0; i < oldalak; i++)
+        {
+            p += sarkok[i];
+        }
+
+        return p;
+    }
+
+    MyPoint sulyPontAbszolut() const
+    {
+        MyPoint p = sulyPontRelativ();
+        p += *kozepPont;
+        return p;
+    } 
+
+    int legnagyobbKiterjedes() const
+    {
+        int result = 0;
+        for (int i = 0; i < oldalak; i++)
+        {
+            if (result > *kozepPont >> sarkok[i])
+            {
+                result = *kozepPont >> sarkok[i];
+            }
+        }
+
+        return result;
+    }
+
+    pair<bool ,MyPoint> operator |(const MyKeret& _k)
+    {
+        MyPoint utkozoPont;
+        pair<bool, MyPoint> result;
+
+        int a = 0, b = 0;
+
+        a = this->legnagyobbKiterjedes();
+        b = _k.legnagyobbKiterjedes();
+
+        if (*kozepPont >> *_k.kozepPont > a + b)
+        {
+            result.first = false;
+            result.second = utkozoPont;
+            return result;
+        }
+
+    }
 };

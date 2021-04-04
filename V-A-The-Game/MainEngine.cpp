@@ -10,7 +10,8 @@ MainEngine::MainEngine()
 
 MainEngine::~MainEngine()
 {
-
+    delete gEngine;
+    delete fEngine;
 }
 
 void MainEngine::addTestElem(MyObj* _obj)
