@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "V-A-The-Game", "V-A-The-Game\V-A-The-Game.vcxproj", "{9C8C6E55-EC5F-4FB5-8089-0A00A5C54C6C}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{1E19C023-1BF5-410D-A069-147F3468821F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,10 @@ Global
 		{9C8C6E55-EC5F-4FB5-8089-0A00A5C54C6C}.Release|x64.Build.0 = Release|x64
 		{9C8C6E55-EC5F-4FB5-8089-0A00A5C54C6C}.Release|x86.ActiveCfg = Release|Win32
 		{9C8C6E55-EC5F-4FB5-8089-0A00A5C54C6C}.Release|x86.Build.0 = Release|Win32
+		{1E19C023-1BF5-410D-A069-147F3468821F}.Debug|x64.ActiveCfg = Debug
+		{1E19C023-1BF5-410D-A069-147F3468821F}.Debug|x86.ActiveCfg = Debug
+		{1E19C023-1BF5-410D-A069-147F3468821F}.Release|x64.ActiveCfg = Release
+		{1E19C023-1BF5-410D-A069-147F3468821F}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
