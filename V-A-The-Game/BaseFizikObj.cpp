@@ -33,3 +33,23 @@ void BaseFizikObj::setMozgasAllapot(MozgasAllapot* _m)
 
     mozgasAllapot = _m;
 }
+
+void BaseFizikObj::addUtkozo(BaseFizikObj* _new)
+{
+    utkozok.push_back(_new);
+}
+
+void BaseFizikObj::removeUtkozo(BaseFizikObj* _old)
+{
+    utkozok.remove(_old);
+}
+
+bool BaseFizikObj::utkozoE(BaseFizikObj* _elem)
+{
+    if (find(utkozok.begin(), utkozok.end(), _elem) == utkozok.end())
+    {
+        return false;
+    }
+
+    return true;
+}

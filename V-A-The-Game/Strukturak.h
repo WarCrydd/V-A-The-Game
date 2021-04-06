@@ -42,11 +42,11 @@ struct MyPoint
         y -= pont.y;
     }
 
-    int operator >>(const MyPoint& pont) const //Távolság
+    int operator >>(const MyPoint& pont) const
     {
         int result = pow(x - pont.x, 2) + pow(y - pont.y, 2);
         return sqrt(result);
-    } //Távolság
+    }//Távolság
 
     void toSDL_Point(SDL_Point* pont)
     {
@@ -95,13 +95,12 @@ struct MyLine
     {
         pair<bool, MyPoint> result;
 
-        double a1 = b->y - a->y;
-        double b1 = a->x - b->x;
+        double a1 = (double)b->y - a->y;
+        double b1 = (double)a->x - b->x;
         double c1 = a1 * (a->x) + b1 * (a->y);
 
-        // Line CD represented as a2x + b2y = c2 
-        double a2 = _vonal.b->y - _vonal.a->y;
-        double b2 = _vonal.a->x - _vonal.b->x;
+        double a2 = (double)_vonal.b->y - _vonal.a->y;
+        double b2 = (double)_vonal.a->x - _vonal.b->x;
         double c2 = a2 * (_vonal.a->x) + b2 * (_vonal.a->y);
 
         double d = a1 * b2 - a2 * b1;

@@ -38,7 +38,7 @@ void ControlerKarakterVezerlo::objUpdate(SDL_Event& e)
 
     if (nagytasEngedely)
     {
-        if (e.jaxis.axis == 4)
+        if (e.jaxis.axis == 3)
         {
             if (axis4Aktív)
             {
