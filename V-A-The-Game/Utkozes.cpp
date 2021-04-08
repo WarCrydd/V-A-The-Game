@@ -29,11 +29,11 @@ Utkozes::~Utkozes()
 pair<int, int> Utkozes::update()
 {
     MyPoint aA = *a->getMozgasAllapot()->getKozepPont();
-    MyPoint aB = aB + *a->getMozgasAllapot()->getSebesseg() * 10000;
+    MyPoint aB = aA + *a->getMozgasAllapot()->getSebesseg() * 10000;
     MyLine lineA = MyLine(&aA, &aB);
 
     MyPoint bA = *b->getMozgasAllapot()->getKozepPont();
-    MyPoint bB = bB + *b->getMozgasAllapot()->getSebesseg() * 10000;
+    MyPoint bB = bA + *b->getMozgasAllapot()->getSebesseg() * 10000;
     MyLine lineB = MyLine(&bA, &bB);
 
     auto result = lineA | lineB;
