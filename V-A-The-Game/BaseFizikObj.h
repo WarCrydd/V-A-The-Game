@@ -16,6 +16,7 @@ protected:
     list<BaseFizikObj*> utkozok;
 
 public:
+
     BaseFizikObj(int x, int y, int r, int h, int w);
     BaseFizikObj(MozgasAllapot* _m);
 

@@ -184,7 +184,7 @@
       <Filter>Source Files\Motor\Játék\Irányitás</Filter>
     </ClCompile>
     <ClCompile Include="Utkozes.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Motor\Fizika\Álapot tárolók</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -261,12 +261,15 @@
       <Filter>Header Files\Z_Fügetlenek</Filter>
     </ClInclude>
     <ClInclude Include="Utkozes.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Motor\Fizika\Álapot tárolók</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="V-A.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
