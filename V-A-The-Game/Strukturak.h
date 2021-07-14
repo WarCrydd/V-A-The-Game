@@ -42,7 +42,7 @@ struct MyPoint
         y -= pont.y;
     }
 
-    int operator >>(const MyPoint& pont) const //Távolság
+    int operator >>(const MyPoint& pont) const
     {
         int result = pow(x - pont.x, 2) + pow(y - pont.y, 2);
         return sqrt(result);
