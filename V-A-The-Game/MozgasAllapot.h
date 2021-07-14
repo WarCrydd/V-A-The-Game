@@ -1,11 +1,12 @@
 #pragma once
-#include <SDL.h>
 
+#include <SDL.h>
 #include "BaseObj.h"
 #include "Strukturak.h"
 
 using namespace std;
 using namespace MyStructs;
+
 class MozgasAllapot : public BaseObj
 {
 protected:

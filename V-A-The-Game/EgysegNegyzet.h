@@ -1,5 +1,7 @@
 #pragma once
+
 #include "EpitoElem.h"
+
 class EgysegNegyzet : public EpitoElem
 {
 public:

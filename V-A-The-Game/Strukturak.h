@@ -50,11 +50,6 @@ namespace MyStructs
             int result = pow(x - pont.x, 2) + pow(y - pont.y, 2);
             return sqrt(result);
         }//Távolság
-    int operator >>(const MyPoint& pont) const
-    {
-        int result = pow(x - pont.x, 2) + pow(y - pont.y, 2);
-        return sqrt(result);
-    } //Távolság
 
         void toSDL_Point(SDL_Point* pont)
         {
@@ -192,12 +187,12 @@ namespace MyStructs
             a = this->legnagyobbKiterjedes();
             b = _k.legnagyobbKiterjedes();
 
-        if (*kozepPont >> *_k.kozepPont > a + b)
-        {
-            result.first = false;
-            result.second = utkozoPont;
-            return result;
+            if (*kozepPont >> *_k.kozepPont > a + b)
+            {
+                result.first = false;
+                result.second = utkozoPont;
+                return result;
+            }
         }
-
-    }
+    };
 };

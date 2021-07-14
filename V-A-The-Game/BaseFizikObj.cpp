@@ -1,5 +1,5 @@
-
 #include "BaseFizikObj.h"
+#include "MozgasAllapot.h"
 
 BaseFizikObj::BaseFizikObj(int x, int y, int r, int h, int w)
 {

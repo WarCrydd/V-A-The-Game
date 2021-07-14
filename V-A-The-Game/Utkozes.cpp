@@ -1,3 +1,4 @@
+#pragma once
 #include "Utkozes.h"
 
 Utkozes::Utkozes(BaseFizikObj* _a, BaseFizikObj* _b)

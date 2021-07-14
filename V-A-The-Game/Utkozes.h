@@ -4,6 +4,7 @@
 #include "BaseFizikObj.h"
 
 using namespace std;
+
 class Utkozes : public BaseObj
 {
 protected:
