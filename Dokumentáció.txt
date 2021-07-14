@@ -1,0 +1,3 @@
+Fizika
+	-az utközés osztály tárol egy lehetséges ütközést
+	-minden ütközésnek van egy várható ideje ez egy 

@@ -64,6 +64,5 @@ int main(int argc, char* args[])
 	jatek->start();
 
 	cout << "A futas sikeres volt" << endl;
-
 	return 0;
 }

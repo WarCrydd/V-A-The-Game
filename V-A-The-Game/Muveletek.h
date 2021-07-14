@@ -31,33 +31,6 @@ namespace Eltolasok
         pont -> y = negyzet->y + negyzet->h / 2;
     };
 
-    auto VANKOZOSPONT = [](SDL_Point* A, SDL_Point* B, SDL_Point* C, SDL_Point* D, SDL_Point* result)
-    {
-        // Line AB represented as a1x + b1y = c1 
-        double a1 = B->y - A->y;
-        double b1 = A->x - B->x;
-        double c1 = a1 * (A->x) + b1 * (A->y);
-
-        // Line CD represented as a2x + b2y = c2 
-        double a2 = D->y - C->y;
-        double b2 = C->x - D->x;
-        double c2 = a2 * (C->x) + b2 * (C->y);
-
-        double d = a1 * b2 - a2 * b1;
-        if (d == 0)
-        {
-            return result;
-        }
-        else
-        {
-            int x = (b2 * c1 - b1 * c2) / d;
-            int y = (a1 * c2 - a2 * c1) / d;
-
-            result->x = x;
-            result->y = y;
-            return result;
-        }
-    };
 }
 
 namespace TestObjKeszito
