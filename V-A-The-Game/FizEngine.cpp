@@ -38,12 +38,14 @@ void FizEngine::start()
             {
                 elem->update(eltelt_ido);
             }
+
             clStart = clEnd;
             clEnd = chrono::system_clock().now();
             diff = clEnd - clStart;
             if (diff.count() < 2)
             {
-                SDL_Delay(2 - diff.count());
+                int ido = 2 - diff.count();
+                this_thread::sleep_for(chrono::milliseconds(ido));
                 //cout << diff.count() << endl;
             }
         }

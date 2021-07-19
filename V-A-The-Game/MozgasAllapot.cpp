@@ -1,8 +1,9 @@
 #include "MozgasAllapot.h"
 
-MozgasAllapot::MozgasAllapot(int x, int y, int r, MyPoint* _mozgas)
+MozgasAllapot::MozgasAllapot(int x, int y, int r, MyPoint* _mozgas, BaseFizikObj* _f)
 {
     kozepPont = new MyPoint(x, y);
+    felulet = _f;
 
     if (_mozgas == nullptr)
     {

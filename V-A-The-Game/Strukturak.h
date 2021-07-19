@@ -17,10 +17,27 @@ namespace MyStructs
             y = _y;
         }
 
+        MyPoint(const MyPoint& _p)
+        {
+            x = _p.x;
+            y = _p.y;
+        }
+
         MyPoint()
         {
             x = 0;
             y = 0;
+        }
+
+        ~MyPoint()
+        {
+
+        }
+
+        MyPoint operator=(const MyPoint& _p)
+        {
+            x = _p.x;
+            y = _p.y;
         }
 
         MyPoint operator +(const MyPoint& pont) const
@@ -82,10 +99,23 @@ namespace MyStructs
             b = _b;
         }
 
+        MyLine(const MyLine& _m)
+        {
+            a = new MyPoint(*_m.a);
+            b = new MyPoint(*_m.b);
+        }
+
         MyLine()
         {
             a = new MyPoint();
             b = new MyPoint();
+        }
+
+        MyLine operator= (const MyLine& _l)
+        {
+            MyLine();
+            *a = *_l.a;
+            *b = *_l.b;
         }
 
         ~MyLine()
@@ -94,6 +124,8 @@ namespace MyStructs
             delete b;
         }
 
+        // Érintkezés vizsgálata a paraméterben megkapott vonallal
+        //pair<van-e,ha van az érintkezés koordinátája>
         pair<bool, MyPoint> operator |(const MyLine& _vonal)
         {
             pair<bool, MyPoint> result;

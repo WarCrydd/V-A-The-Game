@@ -13,8 +13,6 @@ protected:
     MozgasAllapot* mozgasAllapot = nullptr;
     SDL_Rect* befogo = nullptr;
 
-    list<BaseFizikObj*> utkozok;
-
 public:
 
     BaseFizikObj(int x, int y, int r, int h, int w);
@@ -30,5 +28,4 @@ public:
     bool utkozoE(BaseFizikObj* _elem);
 
     virtual void update(double ido) = 0;
-
 };
